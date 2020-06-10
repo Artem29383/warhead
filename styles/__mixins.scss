@@ -1,0 +1,280 @@
+@mixin statistics($margin) {
+  .statistics {
+    display: flex;
+    justify-content: space-between;
+    max-width: 169px;
+    margin-top: $margin;
+    width: 100%;
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-svg {
+        width: 16px;
+        cursor: pointer;
+        height: 14px;
+        margin-right: 5px;
+      }
+
+      &-text {
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+@mixin vector($pixel, $opacity) {
+  .vector {
+    width: 22px;
+    height: 20px;
+    position: absolute;
+    opacity: $opacity;
+    transition: opacity 0.2s linear;
+
+    &:nth-child(1) {
+      left: 0 + $pixel;
+      top: 0 + $pixel;
+    }
+
+    &:nth-child(2) {
+      left: 0 + $pixel;
+      bottom: 0 + $pixel;
+      transform: rotate(-90deg);
+    }
+
+    &:nth-child(3) {
+      right: 0 + $pixel;
+      top: 0 + $pixel;
+      transform: rotate(90deg);
+    }
+
+    &:nth-child(4) {
+      right: 0 + $pixel;
+      bottom: 0 + $pixel;
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+@mixin footer() {
+  .footer {
+    width: 100%;
+    max-width: 294px;
+
+    &-author {
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 24px;
+      max-width: 294px;
+
+      &__time {
+        font-weight: normal;
+        font-size: 9px;
+      }
+    }
+  }
+}
+
+@mixin doButton() {
+  border: none;
+  height: 24px;
+  color: #fff;
+  background: #FAAF3F;
+  border-radius: 2px;
+  max-width: 118px;
+  width: 100%;
+  font-weight: 500;
+  font-family: BRUTAL_TYPE_MEDIUM, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 42px;
+}
+
+@mixin titleBtn() {
+  background: #333333;
+  border-radius: 2px;
+  font-size: 14px;
+  min-width: 92px;
+  min-height: 24px;
+  display: flex;
+  color: #fff;
+  font-family: BRUTAL_TYPE, sans-serif;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  @media (max-width: 1440px) {
+    font-size: 13px;
+  }
+}
+
+@mixin rightWindowSeries($marginBottom, $marginBottom1440) {
+  .right__window__header {
+    display: flex;
+    margin-bottom: $marginBottom;
+
+    @media (max-width: 1440px) {
+      margin-bottom: $marginBottom1440;
+    }
+
+    &-btn {
+      @include titleBtn();
+    }
+
+    &-all {
+      width: 100%;
+      text-align: end;
+      color: #0776D2;
+      margin-left: auto;
+      font-size: 14px;
+      line-height: 21px;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@mixin mainBtn() {
+  background: #FAAF3F;
+  border-radius: 2px;
+  border: none;
+  font-size: 14px;
+  line-height: 16px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+  color: #fff;
+  font-family: BRUTAL_TYPE, sans-serif;
+
+  @media (max-width: 1440px) {
+    line-height: 11px;
+  }
+}
+
+@mixin rightWindowTemplate($marginBottom, $marginBottom1440) {
+  padding: 20px 16px 20px 21px;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: $marginBottom;
+
+  @media (max-width: 1440px) {
+    margin-bottom: $marginBottom1440;
+  }
+}
+
+@mixin seriesList($maxWidth, $padding) {
+  .series__list {
+    width: 100%;
+    padding-top: 10px;
+    border-left: 1px solid #828282;
+    position: relative;
+    margin: 16px 0 21px 0;
+
+    @media (max-width: 1440px) {
+      margin: 16px 0 27px 0;
+    }
+
+    &::before {
+      height: 9px;
+      width: 1px;
+      position: absolute;
+      top: -2px;
+      left: -1px;
+      content: '';
+      display: block;
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      background: linear-gradient(180.15deg, rgba(255, 255, 255, 0) 0.23%, #FFFFFF 126.37%), linear-gradient(180.15deg, rgba(255, 255, 255, 0) 0.23%, #FFFFFF 126.37%);
+    }
+
+    &::after {
+      height: 52px;
+      width: 1px;
+      position: absolute;
+      bottom: -10px;
+      left: -1px;
+      content: '';
+      display: block;
+      background: linear-gradient(180.86deg, rgba(255, 255, 255, 0) 0.23%, #FFFFFF 74.8%);
+    }
+
+    &-item {
+      max-width: $maxWidth;
+      width: 100%;
+      font-size: 15px;
+      padding: $padding;
+      line-height: 21px;
+      position: relative;
+
+      &:hover {
+        a {
+          color: #FAAF3F;
+        }
+
+        &::after {
+          background: #FAAF3F;;
+        }
+      }
+
+      &:after {
+        display: block;
+        content: '';
+        height: 10px;
+        left: -5.3px;
+        top: 6px;
+        position: absolute;
+        width: 10px;
+        background: #828282;
+        border-radius: 50%;
+      }
+
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+    }
+
+    &-item:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@mixin cardTitleText($marginBottom, $font, $letterSpace) {
+  .card__title {
+    font-size: $font;
+    height: 83px;
+    line-height: 30px;
+    font-family: BRUTAL_TYPE_BOLD, sans-serif;
+    letter-spacing: $letterSpace;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
+    max-width: 558px;
+    width: 100%;
+    margin-bottom: $marginBottom;
+  }
+
+  .card__text {
+    font-size: 18.1px;
+    line-height: 24px;
+    max-width: 720px;
+  }
+}

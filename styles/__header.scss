@@ -1,0 +1,53 @@
+.header {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  height: 48px;
+  position: absolute;
+  top: 174px;
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  z-index: 1000;
+
+  &__burger {
+    height: 15px;
+    width: 16px;
+    margin: 0 25px 0 47px;
+
+    @media (max-width: 1439px) {
+      margin: 0 12px 0 38px;
+    }
+  }
+
+  &__navigation {
+    max-width: 476px;
+    width: 100%;
+    display: flex;
+
+    &-item {
+      font-size: 18px;
+      line-height: 22px;
+      color: #000;
+      margin-right: 27px;
+      cursor: pointer;
+      letter-spacing: -0.02em;
+      padding: 4px 13px 4px 14px;
+
+      &:hover {
+        background: #FAAF3F;
+        border-radius: 2px;
+        color: #fff;
+      }
+    }
+  }
+
+  &__search {
+    height: 15px;
+    width: 14px;
+    margin: 0 12px 0 auto;
+
+    @media (max-width: 1439px) {
+      margin: 0 22px 0 auto;
+    }
+  }
+}

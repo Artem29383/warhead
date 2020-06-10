@@ -1,0 +1,62 @@
+.hardware {
+  background: linear-gradient(360deg, #223036 0%, #223036 100%);
+  width: 100%;
+  height: 173px;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding: 44px 68px 40px 47px;
+
+  @media (max-width: 1439px) {
+    padding: 39px 50px 40px 31px;
+  }
+
+  &__logo {
+    height: 80px;
+    width: 370px;
+    position: relative;
+    margin: 3px 0 4px 0;
+
+
+    @media (max-width: 1439px) {
+      margin: 9px 23px 4px 0;
+    }
+  }
+
+  &__title {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    max-width: 326px;
+    height: 40px;
+    width: 100%;
+  }
+
+  @include vector(0px, 1);
+
+  &__text {
+    max-width: 658px;
+    font-size: 14px;
+    line-height: 22px;
+    font-family: PT_SANS_CAPTION, sans-serif;
+
+    @media (max-width: 1439px) {
+      max-width: 550px;
+    }
+  }
+
+  &__enter {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 10px;
+    top: 12px;
+    right: 19px;
+    position: absolute;
+
+    @media (max-width: 1439px) {
+      top: 16px;
+      right: 15px;
+    }
+  }
+}

@@ -1,0 +1,407 @@
+.body {
+  padding: 37px 68px 30px 72px;
+  background-color: #fff;
+  margin-top: 48px;
+
+  @media (max-width: 1439px) {
+    padding: 37px 11px 30px 12px;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 22px;
+    letter-spacing: -0.01em;
+    color: #000;
+    transform: translate(-2px);
+    margin-bottom: 40px;
+  }
+
+  .arrows {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .arrow {
+      height: 13px;
+      width: 13px;
+      cursor: pointer;
+      border-left: 2px solid #cfcfcf;
+      border-bottom: 2px solid #cfcfcf;
+
+      &__left {
+        margin-right: 14px;
+        transform: rotate(45deg);
+      }
+
+      &__right {
+        margin-right: 1px;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  @include statistics(10px);
+  .footer__block {
+    display: flex;
+    width: calc(100% - 40px);
+    position: absolute;
+    bottom: 30px;
+    justify-content: space-between;
+    @include footer();
+  }
+
+
+  &__content-left__side {
+    max-width: 789px;
+    width: 100%;
+    margin-right: 20px;
+
+    &-notepad {
+      height: 492px;
+      position: relative;
+      padding: 150px 20px 30px 20px;
+      font-size: 10px;
+      background: url('./../assets/notepad.png');
+
+      @include vector(8px, 0);
+      @include cardTitleText(20px, 24px, -0.025em);
+
+      &:hover .vector {
+        opacity: 1;
+      }
+    }
+
+    & .do {
+      @include doButton();
+    }
+
+
+    & .iron__block {
+      width: 100%;
+      margin-top: 25px;
+      display: flex;
+      margin-bottom: 30px;
+      justify-content: space-between;
+
+      &__work {
+        position: relative;
+        max-width: 517px;
+        width: 100%;
+        padding: 85px 26px 30px 20px;
+        height: 492px;
+        background: url('./../assets/work.png');
+
+        @include vector(8px, 0);
+        @include cardTitleText(40px, 20px, 1.8px);
+
+        &:hover .vector {
+          opacity: 1;
+        }
+      }
+
+      &__down {
+        width: 100%;
+        position: absolute;
+        bottom: 30px;
+        @include footer();
+      }
+
+      &__claster {
+        position: relative;
+        height: 492px;
+        padding: 85px 20px 30px 20px;
+        max-width: 247px;
+        width: 100%;
+        background: url('./../assets/claster.png');
+
+        @include vector(8px, 0);
+        @include cardTitleText(20px, 22px, 1px);
+
+        &:hover .vector {
+          opacity: 1;
+        }
+      }
+    }
+
+    .after__news {
+      font-size: 17.1px;
+      line-height: 24px;
+      margin-bottom: 24px;
+
+      &-text {
+        color: #333333;
+
+        &-bold {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .slider__block {
+      width: 100%;
+
+      &__header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        &-nav {
+          color: #333;
+          flex-basis: 80%;
+          display: flex;
+          align-items: center;
+
+          &__item {
+            font-weight: bold;
+            font-size: 17px;
+            cursor: pointer;
+            line-height: 24px;
+            margin-left: 52px;
+
+            &::after {
+              opacity: 0;
+              background: #F7AB32;
+              height: 2px;
+              width: 100%;
+              content: '';
+              display: block;
+              margin-top: 5px;
+              transition: opacity 0.2s linear;
+            }
+
+            &:hover::after {
+              opacity: 1;
+            }
+          }
+
+          &__item:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+
+      &__list {
+        width: 100%;
+        display: flex;
+        margin-bottom: 36px;
+
+        &-item {
+          padding: 13px 20px 20px 20px;
+          height: 177px;
+          position: relative;
+          max-width: 250px;
+          width: 100%;
+          margin-left: 20px;
+          background: url("./../assets/covid.png");
+
+          &-biology {
+            background: url("./../assets/biology.png");
+          }
+
+          &-team {
+            background: url("./../assets/team.png");
+          }
+
+          & .list__item__text {
+            font-weight: bold;
+            font-family: BRUTAL_TYPE, sans-serif;
+            font-size: 15px;
+            line-height: 24px;
+            letter-spacing: -0.02em;
+            text-transform: capitalize;
+            color: #FFFFFF;
+            text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.33);
+          }
+
+          & .list__item__footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+          }
+        }
+
+        &-item:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .all__series {
+      &__header {
+        width: 100%;
+        display: flex;
+        color: #000;
+        justify-content: space-between;
+
+        &-title {
+          font-size: 28px;
+          line-height: 22px;
+          font-family: PT_SANS_CAPTION, sans-serif;
+          letter-spacing: -0.02em;
+        }
+      }
+
+      &__content {
+        margin-top: 30px;
+        display: flex;
+
+        &-item {
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+          max-width: 380px;
+          width: 100%;
+          margin-right: 29px;
+          padding: 31px 22px 27px 21px;
+
+          & .content__title {
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 24px;
+            margin-bottom: 17px;
+            max-width: 250px;
+            color: #333333;
+          }
+
+          @include seriesList(100%, 0 0 22px 17px);
+
+          &__footer {
+            max-width: 197px;
+            margin: 0 auto;
+
+            .read__article__btn {
+              @include mainBtn();
+            }
+          }
+        }
+
+        &-item:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+  }
+
+  &__content-right__side {
+    max-width: 251px;
+    width: 100%;
+
+    &-series {
+      @include rightWindowTemplate(20px, 20px);
+      @include rightWindowSeries(17px, 15px);
+    }
+
+    & .series__title {
+      font-size: 20px;
+      font-family: BRUTAL_TYPE_BOLD, sans-serif;
+      line-height: 24px;
+      color: #333333;
+
+      @media (max-width: 1440px) {
+        font-size: 19.5px;
+      }
+    }
+
+    @include seriesList(100%, 0 0 22px 15px);
+
+    .series__footer {
+      display: flex;
+      justify-content: center;
+
+      &-btn {
+        @include mainBtn();
+      }
+    }
+
+    &-tests {
+      @include rightWindowTemplate(20px, 20px);
+      @include rightWindowSeries(17px, 20px);
+
+      .tests__body {
+        background: url("./../assets/htmlcss.png");
+        min-height: 238px;
+        padding: 61px 18px 0 20px;
+        position: relative;
+        margin-bottom: 21px;
+
+        &-text {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 25px;
+          font-family: BRUTAL_TYPE, sans-serif;
+          letter-spacing: -0.02em;
+          max-width: 177px;
+          width: 100%;
+        }
+
+        & .footer {
+          position: absolute;
+          bottom: 20px;
+          width: 100%;
+        }
+      }
+
+      & .pass_test {
+        @include mainBtn();
+      }
+    }
+
+    &-html {
+      @include rightWindowTemplate(17px, 20px);
+      @include rightWindowSeries(23px, 24px);
+
+      & .html__body {
+        background: url("./../assets/htmlFive.png");
+        min-height: 146px;
+        margin-bottom: 18px;
+        position: relative;
+
+        &__svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 32px;
+          height: 32px;
+        }
+      }
+
+      & .html__text {
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 21px;
+        color: #333333;
+      }
+    }
+
+    &-recently {
+      @include rightWindowTemplate(20px, 20px);
+      @include rightWindowSeries(17px, 20px);
+      color: #333333;
+
+      & .recently__date {
+        font-weight: bold;
+        font-size: 15px;
+        margin-bottom: 8px;
+        line-height: 21px;
+      }
+
+      & .recently__time {
+        font-size: 14px;
+        line-height: 24px;
+        color: #516E77;
+        margin-bottom: 6px;
+      }
+
+      & .recently__text {
+        font-size: 15px;
+        line-height: 21px;
+      }
+    }
+  }
+}
