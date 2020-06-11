@@ -94,8 +94,8 @@
     }
 
     @media (max-width: 767px) {
-      bottom: 25px;
-      left: 13px;
+      bottom: 24px;
+      left: 14px;
     }
   }
 
@@ -142,10 +142,10 @@
       }
 
       @media (max-width: 767px) {
-        padding: 115px 20px 30px 13px;
+        padding: 115px 20px 30px 14px;
       }
 
-      @media (max-width: 400px) {
+      @media (max-width: 767px) {
         background: url("./../assets/notepad320.png") no-repeat;
         background-size: cover;
       }
@@ -153,8 +153,17 @@
 
     & .do {
       @include doButton();
+
+      @media (max-width: 1439px) {
+        margin-bottom: 39px;
+      }
+
       @media (max-width: 1023px) {
         margin-bottom: 26px;
+      }
+
+      @media (max-width: 767px) {
+        margin-bottom: 24px;
       }
     }
 
@@ -211,7 +220,7 @@
           }
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 767px) {
           background: url("./../assets/work320.png") no-repeat;
           background-size: cover;
         }
@@ -290,7 +299,7 @@
           }
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 767px) {
           background: url("./../assets/claster320.png") no-repeat;
           background-size: cover;
         }
@@ -475,7 +484,7 @@
 
         @media (max-width: 1439px) {
           max-width: 730px;
-          margin-bottom: 35px;
+          margin-bottom: 34px;
         }
 
         @media (max-width: 1023px) {
@@ -528,12 +537,16 @@
             padding: 22px 22px 27px 15px;
 
             & .content__title {
-              font-weight: bold;
-              font-size: 22px;
+              font-family: BRUTAL_TYPE_BOLD, sans-serif;
+              font-size: 20px;
               line-height: 24px;
               margin-bottom: 17px;
               max-width: 250px;
               color: #333333;
+
+              @media (max-width: 1439px) {
+                margin-bottom: 16px;
+              }
 
               @media (max-width: 1023px) {
                 margin-bottom: 15px;
@@ -541,6 +554,7 @@
 
               @media (max-width: 767px) {
                 margin-bottom: 0;
+                letter-spacing: -0.1px;
               }
             }
             @include rightWindowSeries(17px, 20px, none);
@@ -620,6 +634,7 @@
 
     &-series {
       @include rightWindowTemplate(20px, 20px);
+      padding: 21px 16px 20px 21px;
       @include rightWindowSeries(17px, 15px, flex);
     }
 
@@ -635,6 +650,14 @@
     }
 
     @include seriesList(100%, 0 0 22px 15px, 16px 0 26px 0, 0 0 23px 13px);
+
+    @media (max-width: 1440px) {
+      .series__list {
+        &-item {
+          padding: 0px 0 22px 13px;
+        }
+      }
+    }
 
     .series__footer {
       display: flex;
@@ -671,6 +694,19 @@
           position: absolute;
           bottom: 20px;
           width: 100%;
+
+          @media (max-width: 1440px) {
+            bottom: 21px;
+          }
+
+          @media (max-width: 1439px) {
+            bottom: 22px;
+          }
+        }
+
+        @media (max-width: 1440px) {
+          padding: 58px 18px 0 20px;
+          margin-bottom: 20px;
         }
 
         @media (max-width: 1439px) {
@@ -685,6 +721,7 @@
 
     &-html {
       @include rightWindowTemplate(17px, 20px);
+      padding: 22px 16px 20px 21px;
       @include rightWindowSeries(23px, 24px, flex);
 
       & .html__body {
@@ -701,6 +738,10 @@
           width: 32px;
           height: 32px;
         }
+
+        @media (max-width: 1440px) and (min-width: 1439px) {
+          margin-bottom: 16px;
+        }
       }
 
       & .html__text {
@@ -713,6 +754,15 @@
 
     &-recently {
       @include rightWindowTemplate(20px, 20px);
+
+      @media (max-width: 1440px) and (min-width: 1439px) {
+        padding: 20px 16px 20px 20px;
+      }
+
+      @media (max-width: 1024px) {
+        padding: 18px 16px 20px 21px;
+      }
+
       @include rightWindowSeries(17px, 20px, flex);
       color: #333333;
 
@@ -721,6 +771,10 @@
         font-size: 15px;
         margin-bottom: 8px;
         line-height: 21px;
+
+        @media (max-width: 1024px) {
+          margin-bottom: 5px;
+        }
       }
 
       & .recently__time {
@@ -728,6 +782,10 @@
         line-height: 24px;
         color: #516E77;
         margin-bottom: 6px;
+
+        @media (max-width: 1440px) and (min-width: 1439px) {
+          margin-bottom: 4px;
+        }
       }
 
       & .recently__text {
