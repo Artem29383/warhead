@@ -69,14 +69,14 @@
     <path d="M8.21613 19.9688H0V0H21.9097V7.4883H8.21613V19.9688Z" fill="#F7AB32" />
   </symbol>
   <symbol id="burger" width="100%" height="100%" viewBox="0 0 16 13">
-    <rect x="0.866455" y="0.361816" width="14.1689" height="2.04255" fill="#333333" />
-    <path d="M0.866455 5.46802H15.0354V7.51057H0.866455V5.46802Z" fill="#333333" />
-    <rect x="0.866455" y="10.5745" width="14.1689" height="2.04255" fill="#333333" />
+    <rect x="0.866455" y="0.361816" width="14.1689" height="2.04255" />
+    <path d="M0.866455 5.46802H15.0354V7.51057H0.866455V5.46802Z" />
+    <rect x="0.866455" y="10.5745" width="14.1689" height="2.04255" />
   </symbol>
   <symbol id="search" width="100%" height="100%" viewBox="0 0 16 15">
     <path fill-rule="evenodd" clip-rule="evenodd"
           d="M10.3706 11.0942C9.29394 11.8247 7.97039 12.2553 6.53951 12.2553C2.92784 12.2553 0 9.51187 0 6.12766C0 2.74345 2.92784 0 6.53951 0C10.1512 0 13.079 2.74345 13.079 6.12766C13.079 7.43362 12.643 8.64415 11.9 9.63843L15.2816 12.8746L13.7402 14.3189L10.3706 11.0942ZM10.8992 6.12759C10.8992 8.38373 8.94729 10.2127 6.53951 10.2127C4.13173 10.2127 2.17984 8.38373 2.17984 6.12759C2.17984 3.87144 4.13173 2.04248 6.53951 2.04248C8.94729 2.04248 10.8992 3.87144 10.8992 6.12759Z"
-          fill="#333333" />
+    />
   </symbol>
   <symbol id="eye" width="100%" height="100%" viewBox="0 0 14 9">
     <path
@@ -99,8 +99,16 @@
       fill="white" />
   </symbol>
   <symbol viewBox="0 0 32 32" id="play" width="100%" height="100%">
-    <circle cx="16" cy="16" r="15.5" stroke="white" fill="transparent"/>
-      <path d="M22 16L13 21.1962L13 10.8038L22 16Z" fill="white"/>
+    <circle cx="16" cy="16" r="15.5" stroke="white" fill="transparent" />
+    <path d="M22 16L13 21.1962L13 10.8038L22 16Z" fill="white" />
+  </symbol>
+  <symbol width="100%" height="100%" viewBox="0 0 35 34" id="logoMobile">
+      <path d="M24.75 8H21.5278L21.25 8.30664V25.724L21.5278 26H24.75L25 25.724V8.30664L24.75 8Z" fill="white"/>
+      <path d="M14.4621 15.0221V8.30664L14.1316 8H10.3305L10 8.30664V25.724L10.3305 26H14.1316L14.4621 25.724V18.9779H20.3125V15.0221H14.4621Z" fill="white"/>
+      <path d="M3 8.48676H0V0H8V3.18254H3V8.48676Z" fill="#F7AB32"/>
+      <path d="M8.0498 30.8175V34H0.0498047L0.0498047 25.5132H3.0498L3.0498 30.8175H8.0498Z" fill="#F7AB32"/>
+      <path d="M32 25.4605H35V33.9473H27V30.7647H32V25.4605Z" fill="#F7AB32"/>
+      <path d="M27 3.18254V0L35 0V8.48676H32V3.18254L27 3.18254Z" fill="#F7AB32"/>
   </symbol>
 </svg>
 
@@ -109,6 +117,12 @@
 
   <!--hardware -->
   <div class="hardware">
+    <svg class="hardware__search">
+      <use xlink:href="#search"></use>
+    </svg>
+    <svg class="hardware__burger">
+      <use xlink:href="#burger"></use>
+    </svg>
     <div class="hardware__logo">
       <svg class="vector">
         <use xlink:href="#vector"></use>
@@ -126,6 +140,9 @@
         <use xlink:href="#hardware"></use>
       </svg>
     </div>
+    <svg class="hardware__logo__mobile">
+      <use xlink:href="#logoMobile"></use>
+    </svg>
     <div class="hardware__text">Здесь думающие ​люди ​делятся ​уникальным ​​опытом. ​​Здесь будет ​​одинаково ​интересно
       ​программистам ​и журналистам, ​​админам ​и рекламщикам, ​аналитикам ​и дизайнерам, ​менеджерам ​высшего ​и
       среднего ​звена, ​владельцам ​крупных ​компаний ​и небольших ​фирм, ​а также ​всем ​тем, ​для кого ​IT — ​это не
@@ -146,6 +163,7 @@
       <div class="header__navigation-item">Тесты</div>
       <div class="header__navigation-item">Серии</div>
       <div class="header__navigation-item">Рубрики</div>
+      <div class="header__navigation-item header__navigation-item__search">Поиск</div>
     </div>
     <svg class="header__search">
       <use xlink:href="#search"></use>
@@ -357,6 +375,11 @@
               <div class="slider__block__header-nav__item">Лучшее за год</div>
               <div class="slider__block__header-nav__item">Лучшее за все время</div>
             </div>
+            <div class="slider__block__header-nav__mobile">
+              <div class="slider__block__header-nav__item">Лучшее за месяц</div>
+              <div class="slider__block__header-nav__item">Год</div>
+              <div class="slider__block__header-nav__item">Все время</div>
+            </div>
             <div class="arrows">
               <div class="arrow arrow__left"></div>
               <div class="arrow arrow__right"></div>
@@ -364,106 +387,108 @@
           </div>
           <div class="slider__block__list">
 
-            <div class="slider__block__list-item">
-              <div class="list__item__text">AI против COVID-19: опыт Хубэя и Флориды</div>
-              <div class="list__item__footer">
-                <div class="statistics">
-                  <div class="statistics__item">
-                    <svg class="statistics__item-svg">
-                      <use xlink:href="#eye"></use>
-                    </svg>
-                    <div class="statistics__item-text">4567</div>
-                  </div>
+            <div class="slider__carusel">
+              <div class="slider__carusel-item">
+                <div class="list__item__text">AI против COVID-19: опыт Хубэя и Флориды</div>
+                <div class="list__item__footer">
+                  <div class="statistics">
+                    <div class="statistics__item">
+                      <svg class="statistics__item-svg">
+                        <use xlink:href="#eye"></use>
+                      </svg>
+                      <div class="statistics__item-text">4567</div>
+                    </div>
 
-                  <div class="statistics__item">
-                    <svg class="statistics__item-svg">
-                      <use xlink:href="#dog"></use>
-                    </svg>
-                    <div class="statistics__item-text">12</div>
-                  </div>
+                    <div class="statistics__item">
+                      <svg class="statistics__item-svg">
+                        <use xlink:href="#dog"></use>
+                      </svg>
+                      <div class="statistics__item-text">12</div>
+                    </div>
 
-                  <div class="statistics__item">
-                    <svg class="statistics__item-svg">
-                      <use xlink:href="#chat"></use>
-                    </svg>
-                    <div class="statistics__item-text">45</div>
-                  </div>
+                    <div class="statistics__item">
+                      <svg class="statistics__item-svg">
+                        <use xlink:href="#chat"></use>
+                      </svg>
+                      <div class="statistics__item-text">45</div>
+                    </div>
 
-                  <div class="statistics__item">
-                    <svg class="statistics__item-svg">
-                      <use xlink:href="#rePost"></use>
-                    </svg>
-                    <div class="statistics__item-text">678</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="slider__block__list-item slider__block__list-item-biology">
-              <div class="list__item__text">Биологические проблемы багфикса</div>
-              <div class="list__item__footer">
-                <div class="statistics">
-                  <div class="statistics__item">
-                    <svg class="statistics__item-svg">
-                      <use xlink:href="#eye"></use>
-                    </svg>
-                    <div class="statistics__item-text">4567</div>
-                  </div>
-
-                  <div class="statistics__item">
-                    <svg class="statistics__item-svg">
-                      <use xlink:href="#dog"></use>
-                    </svg>
-                    <div class="statistics__item-text">12</div>
-                  </div>
-
-                  <div class="statistics__item">
-                    <svg class="statistics__item-svg">
-                      <use xlink:href="#chat"></use>
-                    </svg>
-                    <div class="statistics__item-text">45</div>
-                  </div>
-
-                  <div class="statistics__item">
-                    <svg class="statistics__item-svg">
-                      <use xlink:href="#rePost"></use>
-                    </svg>
-                    <div class="statistics__item-text">678</div>
+                    <div class="statistics__item">
+                      <svg class="statistics__item-svg">
+                        <use xlink:href="#rePost"></use>
+                      </svg>
+                      <div class="statistics__item-text">678</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="slider__block__list-item slider__block__list-item-team">
-              <div class="list__item__text">Цели дня как инструмент управления командой</div>
-              <div class="list__item__footer">
-                <div class="statistics">
-                  <div class="statistics__item">
-                    <svg class="statistics__item-svg">
-                      <use xlink:href="#eye"></use>
-                    </svg>
-                    <div class="statistics__item-text">4567</div>
+              <div class="slider__carusel-item slider__carusel-item-biology">
+                <div class="list__item__text">Биологические проблемы багфикса</div>
+                <div class="list__item__footer">
+                  <div class="statistics">
+                    <div class="statistics__item">
+                      <svg class="statistics__item-svg">
+                        <use xlink:href="#eye"></use>
+                      </svg>
+                      <div class="statistics__item-text">4567</div>
+                    </div>
+
+                    <div class="statistics__item">
+                      <svg class="statistics__item-svg">
+                        <use xlink:href="#dog"></use>
+                      </svg>
+                      <div class="statistics__item-text">12</div>
+                    </div>
+
+                    <div class="statistics__item">
+                      <svg class="statistics__item-svg">
+                        <use xlink:href="#chat"></use>
+                      </svg>
+                      <div class="statistics__item-text">45</div>
+                    </div>
+
+                    <div class="statistics__item">
+                      <svg class="statistics__item-svg">
+                        <use xlink:href="#rePost"></use>
+                      </svg>
+                      <div class="statistics__item-text">678</div>
+                    </div>
                   </div>
+                </div>
+              </div>
 
-                  <div class="statistics__item">
-                    <svg class="statistics__item-svg">
-                      <use xlink:href="#dog"></use>
-                    </svg>
-                    <div class="statistics__item-text">12</div>
-                  </div>
+              <div class="slider__carusel-item slider__carusel-item-team">
+                <div class="list__item__text">Цели дня как инструмент управления командой</div>
+                <div class="list__item__footer">
+                  <div class="statistics">
+                    <div class="statistics__item">
+                      <svg class="statistics__item-svg">
+                        <use xlink:href="#eye"></use>
+                      </svg>
+                      <div class="statistics__item-text">4567</div>
+                    </div>
 
-                  <div class="statistics__item">
-                    <svg class="statistics__item-svg">
-                      <use xlink:href="#chat"></use>
-                    </svg>
-                    <div class="statistics__item-text">45</div>
-                  </div>
+                    <div class="statistics__item">
+                      <svg class="statistics__item-svg">
+                        <use xlink:href="#dog"></use>
+                      </svg>
+                      <div class="statistics__item-text">12</div>
+                    </div>
 
-                  <div class="statistics__item">
-                    <svg class="statistics__item-svg">
-                      <use xlink:href="#rePost"></use>
-                    </svg>
-                    <div class="statistics__item-text">678</div>
+                    <div class="statistics__item">
+                      <svg class="statistics__item-svg">
+                        <use xlink:href="#chat"></use>
+                      </svg>
+                      <div class="statistics__item-text">45</div>
+                    </div>
+
+                    <div class="statistics__item">
+                      <svg class="statistics__item-svg">
+                        <use xlink:href="#rePost"></use>
+                      </svg>
+                      <div class="statistics__item-text">678</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -480,60 +505,109 @@
               <div class="arrow arrow__right"></div>
             </div>
           </div>
+
           <div class="all__series__content">
 
-            <div class="all__series__content-item">
-              <div class="content__title">HARDWARE против заблуждений</div>
-              <div class="series__list">
-                <div class="series__list-item">
-                  <a href="#">Мифы в IT-образовании</a>
+            <div class="all__series__carousel">
+              <div class="all__series__carousel-item">
+                <div class="right__window__header">
+                  <button class="right__window__header-btn">серии</button>
+                  <div class="right__window__header-all">
+                    <a href="#">Все серии</a>
+                  </div>
                 </div>
-                <div class="series__list-item">
-                  <a href="#">25 самых популярных мифов о программировании и программистах</a>
+                <div class="content__title">HARDWARE против заблуждений</div>
+                <div class="series__list">
+                  <div class="series__list-item">
+                    <a href="#">Мифы в IT-образовании</a>
+                  </div>
+                  <div class="series__list-item">
+                    <a href="#">25 самых популярных мифов о программировании и программистах</a>
+                  </div>
+                  <div class="series__list-item">
+                    <a href="#">У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых вопиющих IT-заблуждений в
+                      истории</a>
+                  </div>
+                  <div class="series__list-item">
+                    <a href="#">У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых вопиющих IT-заблуждений в
+                      истории</a>
+                  </div>
+                  <div class="series__list-item">
+                    <a href="#">У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых вопиющих IT-заблуждений в
+                      истории</a>
+                  </div>
                 </div>
-                <div class="series__list-item">
-                  <a href="#">У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых вопиющих IT-заблуждений в
-                    истории</a>
-                </div>
-                <div class="series__list-item">
-                  <a href="#">У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых вопиющих IT-заблуждений в
-                    истории</a>
-                </div>
-                <div class="series__list-item">
-                  <a href="#">У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых вопиющих IT-заблуждений в
-                    истории</a>
+                <div class="all__series__carousel-item__footer">
+                  <button class="read__article__btn">Читать 27 статей</button>
                 </div>
               </div>
-              <div class="all__series__content-item__footer">
-                <button class="read__article__btn">Читать 27 статей</button>
-              </div>
-            </div>
 
-            <div class="all__series__content-item">
-              <div class="content__title">HARDWARE против заблуждений</div>
-              <div class="series__list">
-                <div class="series__list-item">
-                  <a href="#">Мифы в IT-образовании</a>
+              <div class="all__series__carousel-item">
+                <div class="right__window__header">
+                  <button class="right__window__header-btn">серии</button>
+                  <div class="right__window__header-all">
+                    <a href="#">Все серии</a>
+                  </div>
                 </div>
-                <div class="series__list-item">
-                  <a href="#">25 самых популярных мифов о программировании и программистах</a>
+                <div class="content__title">HARDWARE против заблуждений</div>
+                <div class="series__list">
+                  <div class="series__list-item">
+                    <a href="#">Мифы в IT-образовании</a>
+                  </div>
+                  <div class="series__list-item">
+                    <a href="#">25 самых популярных мифов о программировании и программистах</a>
+                  </div>
+                  <div class="series__list-item">
+                    <a href="#">У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых вопиющих IT-заблуждений в
+                      истории</a>
+                  </div>
+                  <div class="series__list-item">
+                    <a href="#">У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых вопиющих IT-заблуждений в
+                      истории</a>
+                  </div>
+                  <div class="series__list-item">
+                    <a href="#">У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых вопиющих IT-заблуждений в
+                      истории</a>
+                  </div>
                 </div>
-                <div class="series__list-item">
-                  <a href="#">У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых вопиющих IT-заблуждений в
-                    истории</a>
-                </div>
-                <div class="series__list-item">
-                  <a href="#">У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых вопиющих IT-заблуждений в
-                    истории</a>
-                </div>
-                <div class="series__list-item">
-                  <a href="#">У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых вопиющих IT-заблуждений в
-                    истории</a>
+                <div class="all__series__carousel-item__footer">
+                  <button class="read__article__btn">Читать 27 статей</button>
                 </div>
               </div>
-              <div class="all__series__content-item__footer">
-                <button class="read__article__btn">Читать 27 статей</button>
+
+              <div class="all__series__carousel-item">
+                <div class="right__window__header">
+                  <button class="right__window__header-btn">серии</button>
+                  <div class="right__window__header-all">
+                    <a href="#">Все серии</a>
+                  </div>
+                </div>
+                <div class="content__title">HARDWARE против заблуждений</div>
+                <div class="series__list">
+                  <div class="series__list-item">
+                    <a href="#">Мифы в IT-образовании</a>
+                  </div>
+                  <div class="series__list-item">
+                    <a href="#">25 самых популярных мифов о программировании и программистах</a>
+                  </div>
+                  <div class="series__list-item">
+                    <a href="#">У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых вопиющих IT-заблуждений в
+                      истории</a>
+                  </div>
+                  <div class="series__list-item">
+                    <a href="#">У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых вопиющих IT-заблуждений в
+                      истории</a>
+                  </div>
+                  <div class="series__list-item">
+                    <a href="#">У iPhone нет шансов, а компьютеры не нужны. Топ-8 самых вопиющих IT-заблуждений в
+                      истории</a>
+                  </div>
+                </div>
+                <div class="all__series__carousel-item__footer">
+                  <button class="read__article__btn">Читать 27 статей</button>
+                </div>
               </div>
+
             </div>
 
           </div>

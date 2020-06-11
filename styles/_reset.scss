@@ -209,10 +209,6 @@ body {
   background: #f2f2f2;
 }
 
-body > div {
-  height: 100%;
-}
-
 .container {
   max-width: 1200px;
   width: 100%;
@@ -221,6 +217,14 @@ body > div {
 
   @media (max-width: 1439px) {
     max-width: 1024px;
+  }
+
+  @media (max-width: 1023px) {
+    max-width: 768px;
+  }
+
+  @media (max-width: 599px) {
+    max-width: 100%;
   }
 }
 
