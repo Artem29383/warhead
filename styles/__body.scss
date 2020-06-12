@@ -124,14 +124,6 @@
       @include vector(8px, 0);
       @include cardTitleText(20px, 24px, -0.029em, 558px, block, 558px);
 
-      &:hover .vector {
-        opacity: 1;
-
-        @media (max-width: 1023px) {
-          opacity: 0;
-        }
-      }
-
       @media (max-width: 1439px) {
         background: url("./../assets/notepad1024.png");
       }
@@ -144,9 +136,6 @@
 
       @media (max-width: 767px) {
         padding: 115px 20px 30px 14px;
-      }
-
-      @media (max-width: 767px) {
         background: url("./../assets/notepad320.png") no-repeat;
         background-size: cover;
       }
@@ -173,7 +162,7 @@
       width: 100%;
       margin-top: 25px;
       display: flex;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
       justify-content: space-between;
 
       &__work {
@@ -214,6 +203,8 @@
 
         @media (max-width: 767px) {
           padding: 115px 0 30px 13px;
+          background: url("./../assets/work320.png") no-repeat;
+          background-size: cover;
 
           & .do {
             max-width: 105px;
@@ -223,11 +214,6 @@
             font-size: 19.3px;
             letter-spacing: normal;
           }
-        }
-
-        @media (max-width: 767px) {
-          background: url("./../assets/work320.png") no-repeat;
-          background-size: cover;
         }
       }
 
@@ -300,6 +286,8 @@
         @media (max-width: 767px) {
           padding: 115px 20px 30px 13px;
           margin-bottom: 30px;
+          background: url("./../assets/claster320.png") no-repeat;
+          background-size: cover;
 
           & .do {
             max-width: 105px;
@@ -309,11 +297,6 @@
             font-size: 19.3px;
             letter-spacing: normal;
           }
-        }
-
-        @media (max-width: 767px) {
-          background: url("./../assets/claster320.png") no-repeat;
-          background-size: cover;
         }
       }
 
@@ -330,16 +313,11 @@
     .after__news {
       font-size: 17px;
       line-height: 24px;
-      margin-bottom: 24px;
-      transform: translateX(-3px);
+      margin-bottom: 26px;
+      transform: translateX(-2px);
 
       &-text {
         color: #333333;
-
-        &-bold {
-          font-weight: bold;
-          font-family: PT_REGULAR, sans-serif;
-        }
       }
 
       @media (max-width: 1439px) {
@@ -353,14 +331,13 @@
       }
 
       @media (max-width: 767px) {
+        padding: 0 14px 0 18px;
         margin-left: 2px;
         margin-bottom: 28px;
       }
     }
 
     .slider__block {
-      width: 100%;
-
       &__header {
         width: 100%;
         display: flex;
@@ -392,10 +369,12 @@
               transition: opacity 0.2s linear;
 
               @media (max-width: 1023px) {
-                padding-top: 6px;
+                padding-top: 4px;
+                margin-top: 7px;
               }
 
               @media (max-width: 767px) {
+                margin-top: 2px;
                 padding-top: 1px;
               }
             }
@@ -444,12 +423,11 @@
           &-nav {
             display: none;
           }
-          margin-bottom: 18px;
+          margin-bottom: 21px;
         }
       }
 
       &__list {
-        width: 100%;
         display: flex;
         margin-bottom: 35px;
         max-width: 800px;
@@ -462,7 +440,8 @@
           font-family: BRUTAL_TYPE_BOLD, sans-serif;
 
           &-item {
-            padding: 15px 20px 20px 18px;
+            @include vector(8px, 0);
+            padding: 14px 20px 20px 19px;
             height: 177px;
             position: relative;
             max-width: 250px;
@@ -482,6 +461,7 @@
               font-family: BRUTAL_TYPE, sans-serif;
               font-size: 15px;
               line-height: 24px;
+              letter-spacing: -0.02em;
               text-transform: capitalize;
               color: #FFFFFF;
               text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.33);
@@ -501,6 +481,11 @@
               @media (max-width: 1439px) {
                 left: 20px;
               }
+
+              @media (max-width: 320px) {
+                left: 18px;
+                bottom: 19px;
+              }
             }
 
             @media (max-width: 1439px) {
@@ -509,11 +494,11 @@
             }
 
             @media (max-width: 1023px) {
-              padding: 15px 20px 20px 21px;
+              padding: 14px 20px 20px 21px;
             }
 
             @media (max-width: 767px) {
-              padding: 15px 0px 20px 19px;
+              padding: 15px 0 20px 19px;
             }
           }
 
@@ -547,7 +532,6 @@
 
     .all__series {
       &__header {
-        width: 100%;
         display: flex;
         color: #000;
         justify-content: space-between;
@@ -710,14 +694,14 @@
 
     &-series {
       @include rightWindowTemplate(20px, 20px);
-      padding: 21px 16px 20px 19px;
+      padding: 21px 16px 22px 19px;
 
       @media (max-width: 1440px) {
         padding: 20px 17px 20px 19px;
       }
 
       @media (max-width: 1024px) {
-        padding: 19px 17px 20px 19px;
+        padding: 19px 17px 21px 19px;
       }
       @include rightWindowSeries(13px, 15px, flex);
     }
@@ -730,6 +714,10 @@
     }
 
     @include seriesList(100%, 0 0 23px 15px, 16px 0 28px 0, 0 0 23px 13px);
+
+    .series__list {
+      margin: 16px 0 26px 0;
+    }
 
     @media (max-width: 1440px) {
       .series__list {
@@ -750,7 +738,8 @@
 
     &-tests {
       @include rightWindowTemplate(20px, 20px);
-      padding: 18px 18px 20px 19px;
+      padding: 18px 18px 24px 19px;
+      margin-bottom: 16px;
       @include rightWindowSeries(17px, 20px, flex);
 
       @media (max-width: 1440px) {
@@ -767,6 +756,8 @@
         padding: 61px 18px 0 20px;
         position: relative;
         margin-bottom: 19px;
+
+        @include vector(8px, 0);
 
         &-text {
           font-style: normal;
@@ -810,7 +801,7 @@
 
     &-html {
       @include rightWindowTemplate(17px, 20px);
-      padding: 18px 19px 20px 19px;
+      padding: 26px 19px 20px 19px;
       @include rightWindowSeries(23px, 24px, flex);
 
       @media (max-width: 1440px) {
@@ -818,7 +809,7 @@
       }
 
       @media (max-width: 1439px) {
-        padding: 16px 17px 20px 20px;
+        padding: 17px 17px 20px 20px;
       }
 
       & .html__body {
@@ -826,6 +817,8 @@
         min-height: 146px;
         margin-bottom: 18px;
         position: relative;
+
+        @include vector(8px, 0);
 
         &__svg {
           position: absolute;
@@ -851,14 +844,14 @@
 
     &-recently {
       @include rightWindowTemplate(20px, 20px);
-      padding: 23px 18px 20px 20px;
+      padding: 21px 18px 20px 20px;
 
       @media (max-width: 1440px) and (min-width: 1439px) {
-        padding: 19px 17px 20px 20px;
+        padding: 20px 17px 20px 20px;
       }
 
       @media (max-width: 1024px) {
-        padding: 19px 16px 20px 20px;
+        padding: 19px 16px 23px 20px;
       }
 
       @include rightWindowSeries(19px, 20px, flex);

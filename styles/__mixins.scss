@@ -70,6 +70,14 @@
       transform: rotate(-180deg);
     }
   }
+
+  &:hover .vector {
+    opacity: 1;
+
+    @media (max-width: 1023px) {
+      opacity: 0;
+    }
+  }
 }
 
 @mixin footer($marginBottom1024) {
@@ -103,7 +111,6 @@
   border-radius: 2px;
   max-width: 118px;
   width: 100%;
-  font-weight: 500;
   font-family: BRUTAL_TYPE_MEDIUM, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -183,12 +190,13 @@
   letter-spacing: 0.02em;
   display: flex;
   width: 100%;
-  padding: 10px 0;
+  padding: 7px 0;
   color: #fff;
   font-family: BRUTAL_TYPE, sans-serif;
 
   @media (max-width: 1440px) {
     line-height: 11px;
+    padding: 10px 0;
   }
 }
 
