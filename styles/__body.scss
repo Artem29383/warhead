@@ -22,11 +22,12 @@
   }
 
   &__title {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 22px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
     color: #000;
     transform: translate(-2px);
+    font-family: PT_SANS_CAPTION, sans-serif;
     margin-bottom: 40px;
 
     @media (max-width: 1439px) {
@@ -41,7 +42,7 @@
 
     @media (max-width: 767px) {
       margin-bottom: 21px;
-      font-size: 23px;
+      font-size: 20px;
       transform: translate(12px);
     }
   }
@@ -69,7 +70,7 @@
       }
     }
 
-    @media (max-width: 1023px) {
+    @media (max-width: 1439px) {
       display: none;
     }
   }
@@ -121,7 +122,7 @@
       background: url('./../assets/notepad.png');
 
       @include vector(8px, 0);
-      @include cardTitleText(20px, 24px, -0.025em, 558px, block, 558px);
+      @include cardTitleText(20px, 24px, -0.029em, 558px, block, 558px);
 
       &:hover .vector {
         opacity: 1;
@@ -186,6 +187,10 @@
         @include vector(8px, 0);
         @include cardTitleText(40px, 20px, 1.8px, 100%, none, 520px);
 
+        .card__text {
+          max-width: 430px;
+        }
+
         &:hover .vector {
           opacity: 1;
 
@@ -230,7 +235,13 @@
         width: 100%;
         position: absolute;
         bottom: 30px;
+        left: 17px;
         @include footer(10px);
+
+        @media (max-width: 1440px) {
+          bottom: 30px;
+          left: 18px;
+        }
 
         @media (max-width: 1439px) {
           bottom: 31px;
@@ -258,7 +269,8 @@
         background: url('./../assets/claster.png');
 
         @include vector(8px, 0);
-        @include cardTitleText(20px, 22px, 1px, 226px, none, 520px);
+        @include cardTitleText(20px, 24px, -0.03em, 217px, none, 520px);
+
 
         &:hover .vector {
           opacity: 1;
@@ -316,24 +328,27 @@
     }
 
     .after__news {
-      font-size: 17.1px;
+      font-size: 17px;
       line-height: 24px;
       margin-bottom: 24px;
+      transform: translateX(-3px);
 
       &-text {
         color: #333333;
 
         &-bold {
           font-weight: bold;
+          font-family: PT_REGULAR, sans-serif;
         }
       }
 
       @media (max-width: 1439px) {
         margin-left: -1px;
+        margin-bottom: 25px;
       }
 
       @media (max-width: 1023px) {
-        padding: 0 14px;
+        padding: 1px 14px 0 18px;
         margin-bottom: 29px;
       }
 
@@ -351,6 +366,7 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
+        padding-right: 3px;
 
         &-nav, &-nav__mobile {
           color: #333;
@@ -374,10 +390,26 @@
               display: block;
               margin-top: 5px;
               transition: opacity 0.2s linear;
+
+              @media (max-width: 1023px) {
+                padding-top: 6px;
+              }
+
+              @media (max-width: 767px) {
+                padding-top: 1px;
+              }
             }
 
             &:first-child::after {
               opacity: 1;
+            }
+
+            @media (max-width: 1439px) {
+              margin-left: 51px;
+            }
+
+            @media (max-width: 1023px) {
+              margin-left: 52px;
             }
           }
 
@@ -404,6 +436,10 @@
           }
         }
 
+        @media (max-width: 1023px) {
+          margin-bottom: 27px;
+        }
+
         @media (max-width: 767px) {
           &-nav {
             display: none;
@@ -423,10 +459,10 @@
           display: grid;
           grid-gap: 22px;
           grid-template-columns: repeat(3, 1fr);
-
+          font-family: BRUTAL_TYPE_BOLD, sans-serif;
 
           &-item {
-            padding: 13px 20px 20px 20px;
+            padding: 15px 20px 20px 18px;
             height: 177px;
             position: relative;
             max-width: 250px;
@@ -446,7 +482,6 @@
               font-family: BRUTAL_TYPE, sans-serif;
               font-size: 15px;
               line-height: 24px;
-              letter-spacing: -0.02em;
               text-transform: capitalize;
               color: #FFFFFF;
               text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.33);
@@ -459,13 +494,22 @@
 
             & .list__item__footer {
               position: absolute;
-              bottom: 20px;
+              bottom: 21px;
+              left: 16px;
               width: 100%;
+
+              @media (max-width: 1439px) {
+                left: 20px;
+              }
             }
 
             @media (max-width: 1439px) {
               width: 250px;
               padding: 16px 20px 20px 19px;
+            }
+
+            @media (max-width: 1023px) {
+              padding: 15px 20px 20px 21px;
             }
 
             @media (max-width: 767px) {
@@ -516,7 +560,7 @@
           font-size: 28px;
           line-height: 22px;
           font-family: PT_SANS_CAPTION, sans-serif;
-          letter-spacing: -0.02em;
+          letter-spacing: -0.04em;
         }
       }
 
@@ -540,7 +584,6 @@
               font-family: BRUTAL_TYPE_BOLD, sans-serif;
               font-size: 20px;
               line-height: 24px;
-              margin-bottom: 17px;
               max-width: 250px;
               color: #333333;
 
@@ -559,6 +602,39 @@
             }
             @include rightWindowSeries(17px, 20px, none);
             @include seriesList(100%, 0 0 22px 17px, 16px 0 18px 0, 0 0 23px 19px);
+
+            .series__list {
+              margin: 15px 0 19px 0;
+
+              &-item {
+                padding: 0 0 23px 20px;
+
+                @media (max-width: 1440px) {
+                  padding: 0 0 22px 18px;
+                }
+
+                @media (max-width: 1439px) {
+                  padding: 0 0 23px 19px;
+                }
+
+                @media (max-width: 767px) {
+                  padding: 0 0 13px 14px;
+                  max-width: 208px;
+                }
+              }
+
+              @media (max-width: 1440px) {
+                margin: 15px 0 25px 0;
+              }
+
+              @media (max-width: 1439px) {
+                margin: 15px 0 20px 0;
+              }
+
+              @media (max-width: 1023px) {
+                margin: 15px 0 32px 0;
+              }
+            }
 
             &__footer {
               max-width: 197px;
@@ -585,11 +661,11 @@
             @media (max-width: 1023px) {
               width: 325px;
               margin-right: 20px;
-              padding: 27px 22px 27px 17px;
+              padding: 23px 22px 20px 17px;
             }
 
             @media (max-width: 767px) {
-              padding: 17px 22px 27px 21px;
+              padding: 15px 22px 27px 21px;
               width: 288px;
             }
           }
@@ -608,7 +684,7 @@
         }
 
         @media (max-width: 1023px) {
-          margin-top: 40px;
+          margin-top: 44px;
           width: 100%;
         }
 
@@ -634,8 +710,16 @@
 
     &-series {
       @include rightWindowTemplate(20px, 20px);
-      padding: 21px 16px 20px 21px;
-      @include rightWindowSeries(17px, 15px, flex);
+      padding: 21px 16px 20px 19px;
+
+      @media (max-width: 1440px) {
+        padding: 20px 17px 20px 19px;
+      }
+
+      @media (max-width: 1024px) {
+        padding: 19px 17px 20px 19px;
+      }
+      @include rightWindowSeries(13px, 15px, flex);
     }
 
     & .series__title {
@@ -643,18 +727,14 @@
       font-family: BRUTAL_TYPE_BOLD, sans-serif;
       line-height: 24px;
       color: #333333;
-
-      @media (max-width: 1440px) {
-        font-size: 19.5px;
-      }
     }
 
-    @include seriesList(100%, 0 0 22px 15px, 16px 0 26px 0, 0 0 23px 13px);
+    @include seriesList(100%, 0 0 23px 15px, 16px 0 28px 0, 0 0 23px 13px);
 
     @media (max-width: 1440px) {
       .series__list {
         &-item {
-          padding: 0px 0 22px 13px;
+          padding: 0 0 23px 15px;
         }
       }
     }
@@ -670,14 +750,23 @@
 
     &-tests {
       @include rightWindowTemplate(20px, 20px);
+      padding: 18px 18px 20px 19px;
       @include rightWindowSeries(17px, 20px, flex);
+
+      @media (max-width: 1440px) {
+        padding: 19px 17px 22px 19px;
+      }
+
+      @media (max-width: 1439px) {
+        padding: 18px 17px 25px 19px;
+      }
 
       .tests__body {
         background: url("./../assets/htmlcss.png");
         min-height: 238px;
         padding: 61px 18px 0 20px;
         position: relative;
-        margin-bottom: 21px;
+        margin-bottom: 19px;
 
         &-text {
           font-style: normal;
@@ -721,8 +810,16 @@
 
     &-html {
       @include rightWindowTemplate(17px, 20px);
-      padding: 22px 16px 20px 21px;
+      padding: 18px 19px 20px 19px;
       @include rightWindowSeries(23px, 24px, flex);
+
+      @media (max-width: 1440px) {
+        padding: 21px 17px 20px 19px;
+      }
+
+      @media (max-width: 1439px) {
+        padding: 16px 17px 20px 20px;
+      }
 
       & .html__body {
         background: url("./../assets/htmlFive.png");
@@ -754,16 +851,18 @@
 
     &-recently {
       @include rightWindowTemplate(20px, 20px);
+      padding: 23px 18px 20px 20px;
 
       @media (max-width: 1440px) and (min-width: 1439px) {
-        padding: 20px 16px 20px 20px;
+        padding: 19px 17px 20px 20px;
       }
 
       @media (max-width: 1024px) {
-        padding: 18px 16px 20px 21px;
+        padding: 19px 16px 20px 20px;
       }
 
-      @include rightWindowSeries(17px, 20px, flex);
+      @include rightWindowSeries(19px, 20px, flex);
+
       color: #333333;
 
       & .recently__date {
@@ -781,10 +880,14 @@
         font-size: 14px;
         line-height: 24px;
         color: #516E77;
-        margin-bottom: 6px;
+        margin-bottom: 4px;
 
         @media (max-width: 1440px) and (min-width: 1439px) {
           margin-bottom: 4px;
+        }
+
+        @media (max-width: 1439px) {
+          margin-bottom: 7px;
         }
       }
 

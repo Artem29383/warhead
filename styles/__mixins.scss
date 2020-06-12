@@ -20,6 +20,7 @@
 
       &-text {
         font-size: 10px;
+        font-family: PT_SANS_CAPTION, sans-serif;
         line-height: 16px;
       }
     }
@@ -119,7 +120,6 @@
   border-radius: 2px;
   font-size: 14px;
   min-width: 92px;
-  min-height: 24px;
   display: flex;
   color: #fff;
   font-family: BRUTAL_TYPE, sans-serif;
@@ -128,10 +128,6 @@
   border: none;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-
-  @media (max-width: 1440px) {
-    font-size: 13px;
-  }
 }
 
 @mixin rightWindowSeries($marginBottom, $marginBottom1440, $display) {
@@ -159,7 +155,7 @@
       color: #0776D2;
       margin-left: auto;
       font-size: 14px;
-      line-height: 21px;
+      line-height: 24px;
 
       a {
         text-decoration: none;
@@ -181,9 +177,10 @@
   border-radius: 2px;
   border: none;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 18px;
   justify-content: center;
   align-items: center;
+  letter-spacing: 0.02em;
   display: flex;
   width: 100%;
   padding: 10px 0;
@@ -213,7 +210,7 @@
     padding-top: 10px;
     border-left: 1px solid #828282;
     position: relative;
-    margin: 16px 0 21px 0;
+    margin: 16px 0 22px 0;
 
     @media (max-width: 1440px) {
       margin: 16px 0 27px 0;
@@ -301,10 +298,6 @@
       @media (max-width: 1439px) {
         padding: $padding1439;
       }
-
-      @media (max-width: 767px) {
-        padding: 0 0 14px 14px;
-      }
     }
 
     &-item:last-child {
@@ -341,12 +334,11 @@
   }
 
   .card__text {
-    font-size: 18.1px;
+    font-size: 18px;
     line-height: 24px;
     max-width: 720px;
 
     @media (max-width: 1439px) {
-      font-size: 18px;
       display: $displayBlockCardText;
     }
 
