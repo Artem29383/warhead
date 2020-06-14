@@ -194,9 +194,19 @@
   color: #fff;
   font-family: BRUTAL_TYPE, sans-serif;
 
+  &:hover {
+    background-color: #F49F21;
+  }
+
   @media (max-width: 1440px) {
     line-height: 11px;
     padding: 10px 0;
+  }
+
+  @media (max-width: 1024px) {
+    &:hover {
+      background-color: #FAAF3F;
+    }
   }
 }
 
