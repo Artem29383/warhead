@@ -41,7 +41,7 @@
     }
 
     @media (max-width: 767px) {
-      margin-bottom: 21px;
+      margin-bottom: 22px;
       font-size: 20px;
       transform: translate(12px);
     }
@@ -183,7 +183,7 @@
         &:hover .vector {
           opacity: 1;
 
-          @media (max-width: 1023px) {
+          @media (max-width: 1024px) {
             opacity: 0;
           }
         }
@@ -261,7 +261,7 @@
         &:hover .vector {
           opacity: 1;
 
-          @media (max-width: 1023px) {
+          @media (max-width: 1024px) {
             opacity: 0;
           }
         }
@@ -285,7 +285,7 @@
 
         @media (max-width: 767px) {
           padding: 115px 20px 30px 13px;
-          margin-bottom: 30px;
+          margin-bottom: 29px;
           background: url("./../assets/claster320.png") no-repeat;
           background-size: cover;
 
@@ -331,9 +331,8 @@
       }
 
       @media (max-width: 767px) {
-        padding: 0 14px 0 18px;
-        margin-left: 2px;
-        margin-bottom: 28px;
+        padding: 0 14px 0 17px;
+        margin: 0 0 28px 2px;
       }
     }
 
@@ -555,14 +554,13 @@
 
         .all__series__carousel {
           display: grid;
-          padding: 3px;
           grid-template-columns: repeat(3, 1fr);
 
           &-item {
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             width: 380px;
             margin-right: 29px;
-            padding: 22px 22px 27px 15px;
+            padding: 25px 25px 30px 18px;
 
             & .content__title {
               font-family: BRUTAL_TYPE_BOLD, sans-serif;
@@ -588,7 +586,7 @@
             @include seriesList(100%, 0 0 22px 17px, 16px 0 18px 0, 0 0 23px 19px);
 
             .series__list {
-              margin: 15px 0 19px 0;
+              margin: 15px 0 22px 0;
 
               &-item {
                 padding: 0 0 23px 20px;
@@ -634,23 +632,23 @@
             }
 
             @media (max-width: 1440px) {
-              padding: 19px 22px 27px 18px;
+              padding: 22px 25px 30px 21px;
             }
 
-            @media (max-width: 1439px) {
-              padding: 19px 22px 27px 17px;
+            @media (max-width: 1024px) and (min-width: 1024px) {
+              padding: 21px 25px 30px 20px;
               width: 350px;
             }
 
             @media (max-width: 1023px) {
               width: 325px;
               margin-right: 20px;
-              padding: 23px 22px 20px 17px;
+              padding: 26px 25px 23px 20px;
             }
 
             @media (max-width: 767px) {
-              padding: 15px 22px 27px 21px;
-              width: 288px;
+              padding: 18px 23px 30px 24px;
+              width: 292px;
             }
           }
 
@@ -809,7 +807,11 @@
       }
 
       @media (max-width: 1439px) {
-        padding: 17px 17px 20px 20px;
+        padding: 17px 17px 18px 20px;
+
+        .right__window__header {
+          margin-bottom: 26px;
+        }
       }
 
       & .html__body {

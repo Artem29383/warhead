@@ -74,7 +74,7 @@
   &:hover .vector {
     opacity: 1;
 
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       opacity: 0;
     }
   }
@@ -170,7 +170,7 @@
         &:hover {
           text-decoration: underline;
 
-          @media (max-width: 1023px) {
+          @media (max-width: 1024px) {
             text-decoration: none;
           }
         }
@@ -272,7 +272,7 @@
         a {
           color: #FAAF3F;
 
-          @media (max-width: 1023px) {
+          @media (max-width: 1024px) {
             color: #333;
           }
         }
@@ -280,7 +280,7 @@
         &::after {
           background: #FAAF3F;;
 
-          @media (max-width: 1023px) {
+          @media (max-width: 1024px) {
             background: #828282;
           }
         }
