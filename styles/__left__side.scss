@@ -16,7 +16,8 @@
     position: relative;
     padding: 150px 20px 30px 20px;
     font-size: 10px;
-    background: url('./../assets/notepad.png');
+    background: center / cover url('./../assets/notepad.png');
+    background-size: cover;
 
     .statistics {
       margin-top: 4px;
@@ -30,7 +31,7 @@
     @include cardTitleText(20px, 24px, -0.029em, 558px, block, 558px);
 
     @media (max-width: 1439px) {
-      background: url("./../assets/notepad1024.png");
+      background: center / cover url("./../assets/notepad1024.png");
 
       .card__title {
         margin-bottom: 22px;
@@ -44,12 +45,12 @@
     @media (max-width: 1023px) {
       height: 386px;
       padding: 71px 20px 30px 20px;
-      background: url("./../assets/notepad768.png");
+      background: center / cover url("./../assets/notepad768.png");
     }
 
     @media (max-width: 767px) {
       padding: 115px 20px 30px 14px;
-      background: url("./../assets/notepad320.png") no-repeat;
+      background: center / cover url("./../assets/notepad320.png") no-repeat;
       background-size: cover;
     }
   }
@@ -84,7 +85,8 @@
       width: 100%;
       padding: 85px 26px 30px 20px;
       height: 492px;
-      background: url('./../assets/work.png');
+      background: center / cover url('./../assets/work.png');
+      background-size: cover;
 
       @include vector(8px, 0);
       @include cardTitleText(40px, 24px, -0.025em, 100%, none, 520px);
@@ -103,20 +105,20 @@
 
       @media (max-width: 1439px) {
         max-width: 354px;
-        background: url('./../assets/work1024.png');
+        background: center / cover url('./../assets/work1024.png');
       }
 
       @media (max-width: 1023px) {
         max-width: 100%;
         padding: 71px 26px 30px 20px;
-        background: url('./../assets/work768.png');
+        background: center / cover url('./../assets/work768.png');
         margin-bottom: 15px;
         height: 386px;
       }
 
       @media (max-width: 767px) {
         padding: 115px 0 30px 13px;
-        background: url("./../assets/work320.png") no-repeat;
+        background: center / cover url("./../assets/work320.png") no-repeat;
         background-size: cover;
 
         & .do {
@@ -165,7 +167,7 @@
       padding: 85px 20px 30px 20px;
       max-width: 247px;
       width: 100%;
-      background: url('./../assets/claster.png');
+      background: center / cover url('./../assets/claster.png');
 
       @include vector(8px, 0);
       @include cardTitleText(20px, 24px, -0.03em, 217px, none, 520px);
@@ -181,14 +183,14 @@
 
       @media (max-width: 1439px) {
         max-width: 354px;
-        background: url('./../assets/claster1024.png');
+        background: center / cover url('./../assets/claster1024.png');
       }
 
       @media (max-width: 1023px) {
         max-width: 100%;
         height: 386px;
         padding: 71px 26px 30px 20px;
-        background: url('./../assets/claster768.png');
+        background: center / cover url('./../assets/claster768.png');
 
         .card__title {
           font-size: 24px;
@@ -199,7 +201,7 @@
       @media (max-width: 767px) {
         padding: 115px 20px 30px 13px;
         margin-bottom: 29px;
-        background: url("./../assets/claster320.png") no-repeat;
+        background: center / cover url("./../assets/claster320.png") no-repeat;
         background-size: cover;
 
         & .do {

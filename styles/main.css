@@ -789,7 +789,8 @@ button {
   position: relative;
   padding: 150px 20px 30px 20px;
   font-size: 10px;
-  background: url("./../assets/notepad.png");
+  background: center/cover url("./../assets/notepad.png");
+  background-size: cover;
 }
 .body__content-left__side-notepad .statistics {
   margin-top: 4px;
@@ -878,7 +879,7 @@ button {
 }
 @media (max-width: 1439px) {
   .body__content-left__side-notepad {
-    background: url("./../assets/notepad1024.png");
+    background: center/cover url("./../assets/notepad1024.png");
   }
   .body__content-left__side-notepad .card__title {
     margin-bottom: 22px;
@@ -893,13 +894,13 @@ button {
   .body__content-left__side-notepad {
     height: 386px;
     padding: 71px 20px 30px 20px;
-    background: url("./../assets/notepad768.png");
+    background: center/cover url("./../assets/notepad768.png");
   }
 }
 @media (max-width: 767px) {
   .body__content-left__side-notepad {
     padding: 115px 20px 30px 14px;
-    background: url("./../assets/notepad320.png") no-repeat;
+    background: center/cover url("./../assets/notepad320.png") no-repeat;
     background-size: cover;
   }
 }
@@ -949,7 +950,8 @@ button {
   width: 100%;
   padding: 85px 26px 30px 20px;
   height: 492px;
-  background: url("./../assets/work.png");
+  background: center/cover url("./../assets/work.png");
+  background-size: cover;
 }
 .body__content-left__side .iron__block__work .vector {
   width: 22px;
@@ -1042,14 +1044,14 @@ button {
 @media (max-width: 1439px) {
   .body__content-left__side .iron__block__work {
     max-width: 354px;
-    background: url("./../assets/work1024.png");
+    background: center/cover url("./../assets/work1024.png");
   }
 }
 @media (max-width: 1023px) {
   .body__content-left__side .iron__block__work {
     max-width: 100%;
     padding: 71px 26px 30px 20px;
-    background: url("./../assets/work768.png");
+    background: center/cover url("./../assets/work768.png");
     margin-bottom: 15px;
     height: 386px;
   }
@@ -1057,7 +1059,7 @@ button {
 @media (max-width: 767px) {
   .body__content-left__side .iron__block__work {
     padding: 115px 0 30px 13px;
-    background: url("./../assets/work320.png") no-repeat;
+    background: center/cover url("./../assets/work320.png") no-repeat;
     background-size: cover;
   }
   .body__content-left__side .iron__block__work .do {
@@ -1129,7 +1131,7 @@ button {
   padding: 85px 20px 30px 20px;
   max-width: 247px;
   width: 100%;
-  background: url("./../assets/claster.png");
+  background: center/cover url("./../assets/claster.png");
 }
 .body__content-left__side .iron__block__claster .vector {
   width: 22px;
@@ -1219,7 +1221,7 @@ button {
 @media (max-width: 1439px) {
   .body__content-left__side .iron__block__claster {
     max-width: 354px;
-    background: url("./../assets/claster1024.png");
+    background: center/cover url("./../assets/claster1024.png");
   }
 }
 @media (max-width: 1023px) {
@@ -1227,7 +1229,7 @@ button {
     max-width: 100%;
     height: 386px;
     padding: 71px 26px 30px 20px;
-    background: url("./../assets/claster768.png");
+    background: center/cover url("./../assets/claster768.png");
   }
   .body__content-left__side .iron__block__claster .card__title {
     font-size: 24px;
@@ -1238,7 +1240,7 @@ button {
   .body__content-left__side .iron__block__claster {
     padding: 115px 20px 30px 13px;
     margin-bottom: 29px;
-    background: url("./../assets/claster320.png") no-repeat;
+    background: center/cover url("./../assets/claster320.png") no-repeat;
     background-size: cover;
   }
   .body__content-left__side .iron__block__claster .do {
