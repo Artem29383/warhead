@@ -1440,7 +1440,7 @@ button {
 @media (max-width: 1439px) {
   .body__content-left__side .slider__block__list .slider__carusel-item {
     width: 250px;
-    padding: 16px 20px 20px 19px;
+    padding: 14px 20px 20px 19px;
   }
 }
 @media (max-width: 1023px) {
