@@ -20,7 +20,7 @@
 
       &-text {
         font-size: 10px;
-        font-family: PT_SANS_CAPTION, sans-serif;
+        font-family: "PT Sans Caption", Arial, sans-serif;
         line-height: 16px;
       }
     }
@@ -110,8 +110,8 @@
 @mixin doButton() {
   border: none;
   height: 24px;
-  color: #fff;
-  background: #FAAF3F;
+  color: $white;
+  background: $yellow-orange;
   border-radius: 2px;
   max-width: 118px;
   width: 100%;
@@ -132,7 +132,7 @@
   font-size: 14px;
   min-width: 92px;
   display: flex;
-  color: #fff;
+  color: $white;
   font-family: BRUTAL_TYPE, sans-serif;
   align-items: center;
   justify-content: center;
@@ -163,7 +163,7 @@
     &-all {
       width: 100%;
       text-align: end;
-      color: #0776D2;
+      color: $loch;
       margin-left: auto;
       font-size: 14px;
       line-height: 24px;
@@ -184,7 +184,7 @@
 }
 
 @mixin mainBtn() {
-  background: #FAAF3F;
+  background: $yellow-orange;
   border-radius: 2px;
   border: none;
   font-size: 14px;
@@ -195,11 +195,11 @@
   display: flex;
   width: 100%;
   padding: 7px 0;
-  color: #fff;
+  color: $white;
   font-family: BRUTAL_TYPE, sans-serif;
 
   &:hover {
-    background-color: #F49F21;
+    background-color: $buttercup;
   }
 
   @media (max-width: 1440px) {
@@ -209,7 +209,7 @@
 
   @media (max-width: 1024px) {
     &:hover {
-      background-color: #FAAF3F;
+      background-color: $yellow-orange;
     }
   }
 }
@@ -217,8 +217,8 @@
 @mixin rightWindowTemplate($marginBottom, $marginBottom1440) {
   padding: 20px 16px 20px 21px;
   width: 100%;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background: $white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: $marginBottom;
 
   @media (max-width: 1440px) {
@@ -230,7 +230,7 @@
   .series__list {
     width: 100%;
     padding-top: 10px;
-    border-left: 1px solid #828282;
+    border-left: 1px solid $gray;
     position: relative;
     margin: 16px 0 22px 0;
 
@@ -260,7 +260,7 @@
       content: '';
       display: block;
       transform: matrix(1, 0, 0, -1, 0, 0);
-      background: linear-gradient(180.15deg, rgba(255, 255, 255, 0) 0.23%, #FFFFFF 126.37%), linear-gradient(180.15deg, rgba(255, 255, 255, 0) 0.23%, #FFFFFF 126.37%);
+      background: linear-gradient(180.15deg, rgba(255, 255, 255, 0) 0.23%, $white 126.37%), linear-gradient(180.15deg, rgba(255, 255, 255, 0) 0.23%, $white 126.37%);
     }
 
     &::after {
@@ -271,7 +271,7 @@
       left: -1px;
       content: '';
       display: block;
-      background: linear-gradient(180.86deg, rgba(255, 255, 255, 0) 0.23%, #FFFFFF 74.8%);
+      background: linear-gradient(180.86deg, rgba(255, 255, 255, 0) 0.23%, $white 74.8%);
     }
 
     &-item {
@@ -284,7 +284,7 @@
 
       &:hover {
         a {
-          color: #FAAF3F;
+          color: $yellow-orange;
 
           @media (max-width: 1024px) {
             color: #333;
@@ -292,10 +292,10 @@
         }
 
         &::after {
-          background: #FAAF3F;;
+          background: $yellow-orange;;
 
           @media (max-width: 1024px) {
-            background: #828282;
+            background: $gray;
           }
         }
       }
@@ -308,7 +308,7 @@
         top: 6px;
         position: absolute;
         width: 10px;
-        background: #828282;
+        background: $gray;
         border-radius: 50%;
       }
 
@@ -336,7 +336,7 @@
     font-family: BRUTAL_TYPE_BOLD, sans-serif;
     letter-spacing: $letterSpace;
     text-transform: uppercase;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.75);
     max-width: 558px;
     width: 100%;
     margin-bottom: $marginBottom;

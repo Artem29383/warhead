@@ -17,7 +17,7 @@
       display: block;
       top: 16px;
       left: 16px;
-      fill: #fff;
+      fill: $white;
       position: absolute;
       width: 21px;
       height: 19px;
@@ -40,7 +40,7 @@
 
     &__search {
       display: block;
-      fill: #fff;
+      fill: $white;
       width: 14px;
       height: 14px;
       top: 50%;
@@ -138,7 +138,7 @@
     max-width: 658px;
     font-size: 14px;
     line-height: 22px;
-    font-family: PT_SANS_CAPTION, sans-serif;
+    font-family: "PT Sans Caption", Arial, sans-serif;
 
     @media (max-width: 1439px) {
       max-width: 550px;

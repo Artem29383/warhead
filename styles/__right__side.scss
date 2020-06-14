@@ -1,0 +1,222 @@
+&__content-right__side {
+  max-width: 251px;
+  width: 100%;
+
+  &-series {
+    @include rightWindowTemplate(20px, 20px);
+    padding: 21px 16px 22px 19px;
+
+    @media (max-width: 1440px) {
+      padding: 20px 17px 20px 19px;
+    }
+
+    @media (max-width: 1024px) {
+      padding: 19px 17px 19px 19px;
+    }
+    @include rightWindowSeries(13px, 15px, flex);
+  }
+
+  & .series__title {
+    font-size: 20px;
+    font-family: BRUTAL_TYPE_BOLD, sans-serif;
+    line-height: 24px;
+    color: $mine-shaft;
+  }
+
+  @include seriesList(100%, 0 0 23px 15px, 16px 0 28px 0, 0 0 23px 13px);
+
+  .series__list {
+    margin: 16px 0 26px 0;
+
+    @media (max-width: 1024px) and (min-width: 770px) {
+      margin: 16px 0 28px 0;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    .series__list {
+      &-item {
+        padding: 0 0 23px 15px;
+      }
+    }
+  }
+
+  .series__footer {
+    display: flex;
+    justify-content: center;
+
+    &-btn {
+      @include mainBtn();
+    }
+  }
+
+  &-tests {
+    @include rightWindowTemplate(20px, 20px);
+    padding: 18px 18px 24px 19px;
+    margin-bottom: 16px;
+    @include rightWindowSeries(17px, 20px, flex);
+
+    @media (max-width: 1440px) {
+      padding: 19px 17px 22px 19px;
+    }
+
+    @media (max-width: 1439px) {
+      padding: 18px 17px 25px 19px;
+    }
+
+    .tests__body {
+      background: url("./../assets/htmlcss.png");
+      min-height: 238px;
+      padding: 61px 18px 0 20px;
+      position: relative;
+      margin-bottom: 19px;
+
+      @include vector(8px, 0);
+
+      &-text {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 25px;
+        font-family: BRUTAL_TYPE, sans-serif;
+        letter-spacing: -0.02em;
+        max-width: 177px;
+        width: 100%;
+      }
+
+      & .footer {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+
+        @media (max-width: 1440px) {
+          bottom: 21px;
+        }
+
+        @media (max-width: 1439px) {
+          bottom: 22px;
+        }
+      }
+
+      @media (max-width: 1440px) {
+        padding: 58px 18px 0 20px;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 1439px) {
+        padding: 57px 18px 0 20px;
+      }
+
+      @media (max-width: 1024px) and (min-width: 770px) {
+        padding: 59px 18px 0 20px;
+
+        & .footer {
+          bottom: 21px;
+        }
+      }
+    }
+
+    & .pass_test {
+      @include mainBtn();
+    }
+  }
+
+  &-html {
+    @include rightWindowTemplate(17px, 20px);
+    padding: 25px 19px 20px 19px;
+    @include rightWindowSeries(23px, 24px, flex);
+
+    @media (max-width: 1440px) {
+      padding: 21px 17px 20px 19px;
+    }
+
+    @media (max-width: 1439px) {
+      padding: 17px 17px 18px 20px;
+
+      .right__window__header {
+        margin-bottom: 26px;
+      }
+    }
+
+    & .html__body {
+      background: url("./../assets/htmlFive.png");
+      min-height: 146px;
+      margin-bottom: 18px;
+      position: relative;
+
+      @include vector(8px, 0);
+
+      &__svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 32px;
+        height: 32px;
+      }
+
+      @media (max-width: 1440px) and (min-width: 1439px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    & .html__text {
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 21px;
+      color: $mine-shaft;
+    }
+  }
+
+  &-recently {
+    @include rightWindowTemplate(20px, 20px);
+    padding: 22px 18px 22px 20px;
+
+    @media (max-width: 1440px) and (min-width: 1439px) {
+      padding: 20px 17px 20px 20px;
+    }
+
+    @media (max-width: 1024px) {
+      padding: 19px 16px 23px 20px;
+    }
+
+    @include rightWindowSeries(19px, 20px, flex);
+
+    color: $mine-shaft;
+
+    & .recently__date {
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 8px;
+      line-height: 21px;
+
+      @media (max-width: 1024px) {
+        margin-bottom: 5px;
+      }
+    }
+
+    & .recently__time {
+      font-size: 14px;
+      line-height: 24px;
+      color: $cutty;
+      margin-bottom: 4px;
+
+      @media (max-width: 1440px) and (min-width: 1439px) {
+        margin-bottom: 4px;
+      }
+
+      @media (max-width: 1439px) {
+        margin-bottom: 7px;
+      }
+    }
+
+    & .recently__text {
+      font-size: 15px;
+      line-height: 21px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}

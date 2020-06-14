@@ -165,6 +165,21 @@ html {
 }
 
 @font-face {
+  font-weight: 400;
+  font-family: "PT Sans Caption";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/PTSansCaptionRegular.woff2") format("woff2"), url("../fonts/PTSansCaptionRegular.woff") format("woff"); }
+
+@font-face {
+  font-weight: 700;
+  font-family: "PT Sans Caption";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/PTSansCaptionBold.woff2") format("woff2"), url("../fonts/PTSansCaptionBold.woff") format("woff"); }
+
+
+@font-face {
   font-family: PT_BOLD;
   src: url("../fonts/bold.ttf");
 }
@@ -204,9 +219,9 @@ html {
 body {
   margin: 0;
   width: 100%;
-  color: #fff;
+  color: $white;
   font-family: PT_SANS, sans-serif;
-  background: #f2f2f2;
+  background: $concrete;
 }
 
 .container {

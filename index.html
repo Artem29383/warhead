@@ -143,8 +143,8 @@
     <svg class="hardware__logo__mobile">
       <use xlink:href="#logoMobile"></use>
     </svg>
-    <div class="hardware__text">Здесь думающие ​люди ​делятся ​уникальным ​​опытом. ​​Здесь будет ​​одинаково ​интересно
-      ​программистам ​и журналистам, ​​админам ​и рекламщикам, ​аналитикам ​и дизайнерам, ​менеджерам ​высшего ​и
+    <div class="hardware__text">Здесь думающие ​люди ​делятся ​уникальным ​​опытом. ​​Здесь будет одинаково интересно
+      программистам и журналистам, ​​админам ​и рекламщикам, ​аналитикам ​и дизайнерам, ​менеджерам ​высшего ​и
       среднего ​звена, ​владельцам ​крупных ​компаний ​и небольших ​фирм, ​а также ​всем ​тем, <br
         class="break__1024" /> для кого ​IT —
       ​это не
@@ -159,14 +159,14 @@
     <svg class="header__burger">
       <use xlink:href="#burger"></use>
     </svg>
-    <div class="header__navigation">
-      <div class="header__navigation-item">Новости</div>
-      <div class="header__navigation-item">Видео</div>
-      <div class="header__navigation-item">Тесты</div>
-      <div class="header__navigation-item">Серии</div>
-      <div class="header__navigation-item">Рубрики</div>
-      <div class="header__navigation-item header__navigation-item__search">Поиск</div>
-    </div>
+    <ul class="header__navigation">
+      <li class="header__navigation-item">Новости</li>
+      <li class="header__navigation-item">Видео</li>
+      <li class="header__navigation-item">Тесты</li>
+      <li class="header__navigation-item">Серии</li>
+      <li class="header__navigation-item">Рубрики</li>
+      <li class="header__navigation-item header__navigation-item__search">Поиск</li>
+    </ul>
     <svg class="header__search">
       <use xlink:href="#search"></use>
     </svg>
@@ -375,16 +375,16 @@
 
         <div class="slider__block">
           <div class="slider__block__header">
-            <div class="slider__block__header-nav">
-              <div class="slider__block__header-nav__item">Лучшее за месяц</div>
-              <div class="slider__block__header-nav__item">Лучшее за год</div>
-              <div class="slider__block__header-nav__item">Лучшее за все время</div>
-            </div>
-            <div class="slider__block__header-nav__mobile">
-              <div class="slider__block__header-nav__item">Лучшее за месяц</div>
-              <div class="slider__block__header-nav__item">Год</div>
-              <div class="slider__block__header-nav__item">Все время</div>
-            </div>
+            <ul class="slider__block__header-nav">
+              <li class="slider__block__header-nav__item">Лучшее за месяц</li>
+              <li class="slider__block__header-nav__item">Лучшее за год</li>
+              <li class="slider__block__header-nav__item">Лучшее за все время</li>
+            </ul>
+            <ul class="slider__block__header-nav__mobile">
+              <li class="slider__block__header-nav__item">Лучшее за месяц</li>
+              <li class="slider__block__header-nav__item">Год</li>
+              <li class="slider__block__header-nav__item">Все время</li>
+            </ul>
             <div class="arrows">
               <div class="arrow arrow__left"></div>
               <div class="arrow arrow__right"></div>
@@ -392,8 +392,8 @@
           </div>
           <div class="slider__block__list">
 
-            <div class="slider__carusel">
-              <div class="slider__carusel-item">
+            <ul class="slider__carusel">
+              <li class="slider__carusel-item">
                 <svg class="vector">
                   <use xlink:href="#vector"></use>
                 </svg>
@@ -438,9 +438,9 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </li>
 
-              <div class="slider__carusel-item slider__carusel-item-biology">
+              <li class="slider__carusel-item slider__carusel-item-biology">
                 <svg class="vector">
                   <use xlink:href="#vector"></use>
                 </svg>
@@ -485,9 +485,9 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </li>
 
-              <div class="slider__carusel-item slider__carusel-item-team">
+              <li class="slider__carusel-item slider__carusel-item-team">
                 <svg class="vector">
                   <use xlink:href="#vector"></use>
                 </svg>
@@ -532,8 +532,8 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
 
           </div>
         </div>
@@ -661,7 +661,7 @@
 
       <div class="body__content-right__side">
 
-        <div class="body__content-right__side-series">
+        <article class="body__content-right__side-series">
           <div class="right__window__header">
             <button class="right__window__header-btn">серии</button>
             <div class="right__window__header-all">
@@ -686,9 +686,9 @@
           <div class="series__footer">
             <button class="series__footer-btn">Читать 27 статей</button>
           </div>
-        </div>
+        </article>
 
-        <div class="body__content-right__side-tests">
+        <article class="body__content-right__side-tests">
           <div class="right__window__header">
             <button class="right__window__header-btn">Тесты</button>
             <div class="right__window__header-all">
@@ -746,9 +746,9 @@
           </div>
 
           <button class="pass_test">Пройти тест</button>
-        </div>
+        </article>
 
-        <div class="body__content-right__side-html">
+        <article class="body__content-right__side-html">
           <div class="right__window__header">
             <button class="right__window__header-btn">Видео</button>
             <div class="right__window__header-all">
@@ -773,9 +773,9 @@
             </svg>
           </div>
           <div class="html__text">Учим HTML за 1 Час!</div>
-        </div>
+        </article>
 
-        <div class="body__content-right__side-recently">
+        <article class="body__content-right__side-recently">
           <div class="right__window__header">
             <button class="right__window__header-btn">надысь</button>
             <div class="right__window__header-all">
@@ -789,7 +789,7 @@
             NVIDIA расширяет бесплатный 90-дневный доступ к ПО для поддержки удаленных работников
           </div>
 
-        </div>
+        </article>
       </div>
     </div>
   </main>
