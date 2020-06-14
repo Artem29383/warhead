@@ -334,6 +334,11 @@ button {
   position: relative;
   margin: 3px 0 4px 0;
 }
+@media (max-width: 1440px) {
+  .hardware__logo {
+    margin: 5px 0 4px 0;
+  }
+}
 @media (max-width: 1439px) {
   .hardware__logo {
     margin: 12px 23px 4px 0;
