@@ -726,6 +726,11 @@ button {
     margin-bottom: 0px;
   }
 }
+@media (max-width: 320px) {
+  .body .footer__block .footer-author {
+    margin-bottom: 13px;
+  }
+}
 .body .footer__block .footer-author__time {
   font-weight: normal;
   font-size: 10px;
@@ -1050,6 +1055,11 @@ button {
 @media (max-width: 1439px) {
   .body__content-left__side .iron__block__down .footer-author {
     margin-bottom: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .body__content-left__side .iron__block__down .footer-author {
+    margin-bottom: 13px;
   }
 }
 .body__content-left__side .iron__block__down .footer-author__time {
@@ -1762,7 +1772,7 @@ button {
 }
 @media (max-width: 1024px) and (min-width: 1024px) {
   .body__content-left__side .all__series__content .all__series__carousel-item {
-    padding: 20px 17px 30px 20px;
+    padding: 21px 17px 30px 19px;
     width: 350px;
   }
 }

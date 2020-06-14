@@ -95,6 +95,10 @@
         margin-bottom: $marginBottom1024;
       }
 
+      @media (max-width: 320px) {
+        margin-bottom: 13px;
+      }
+
       &__time {
         font-weight: normal;
         font-size: 10px;
