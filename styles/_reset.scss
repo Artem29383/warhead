@@ -184,6 +184,8 @@ html {
   src: url("../fonts/bold.ttf");
 }
 
+
+
 @font-face {
   font-family: PT_REGULAR;
   src: url("../fonts/PTSans-Regular.ttf");
@@ -197,6 +199,11 @@ html {
 @font-face {
   font-family: PT_SANS_CAPTION;
   src: url("../fonts/pt_sans_caption.ttf");
+}
+
+@font-face {
+  font-family: PT_SANS_BOLDER;
+  src: url("../fonts/PT_SANS_BOLDER.ttf");
 }
 
 
@@ -240,11 +247,7 @@ body {
 }
 
 strong {
-  font-weight: bolder;
-
-  @media (max-width: 1440px) {
-    letter-spacing: 0.056px;
-  }
+  font-family: PT_SANS_BOLDER, sans-serif;
 }
 
 button {
