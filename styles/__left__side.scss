@@ -2,6 +2,7 @@
   max-width: 789px;
   width: 100%;
   margin-right: 20px;
+  @include cardTitleText();
 
   &-notepad {
     height: 492px;
@@ -10,6 +11,7 @@
     font-size: 10px;
     background: center / cover url('./../assets/notepad.png');
     background-size: cover;
+    @include vector(8px, 0);
 
     .statistics {
       margin-top: 4px;
@@ -18,9 +20,6 @@
         margin-top: 9px;
       }
     }
-
-    @include vector(8px, 0);
-    @include cardTitleText(20px, 24px, -0.029em, 558px, block, 558px);
 
     @media (max-width: 1439px) {
       background: center / cover url("./../assets/notepad1024.png");
@@ -79,12 +78,29 @@
       height: 492px;
       background: center / cover url('./../assets/work.png');
       background-size: cover;
-
       @include vector(8px, 0);
-      @include cardTitleText(40px, 24px, -0.025em, 100%, none, 520px);
+
+      .card__title {
+        margin-bottom: 40px;
+        font-size: 24px;
+        letter-spacing: -0.025em;
+
+        @media (max-width: 1439px) {
+          max-width: 100%;
+        }
+
+        @media (max-width: 1023px) {
+          max-width: 520px;
+        }
+
+      }
 
       .card__text {
         max-width: 430px;
+
+        @media (max-width: 1439px) {
+          display: none;
+        }
       }
 
       &:hover .vector {
@@ -160,9 +176,30 @@
       max-width: 247px;
       width: 100%;
       background: center / cover url('./../assets/claster.png');
-
       @include vector(8px, 0);
-      @include cardTitleText(20px, 24px, -0.03em, 217px, none, 520px);
+
+      .card__title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        letter-spacing: -0.03em;
+
+        @media (max-width: 1439px) {
+          max-width: 217px;
+        }
+
+        @media (max-width: 1023px) {
+          max-width: 520px;
+        }
+
+      }
+
+      .card__text {
+        max-width: 430px;
+
+        @media (max-width: 1439px) {
+          display: none;
+        }
+      }
 
 
       &:hover .vector {
@@ -500,8 +537,20 @@
               letter-spacing: -0.1px;
             }
           }
-          @include rightWindowSeries(17px, 20px, none);
           @include seriesList(100%, 0 0 22px 17px, 16px 0 18px 0, 0 0 23px 19px);
+          @include rightWindowSeries(none);
+
+          .right__window__header {
+            margin-bottom: 17px;
+
+            @media (max-width: 1440px) {
+              margin-bottom: 20px;
+            }
+
+            @media (max-width: 767px) {
+              margin-bottom: 15px;
+            }
+          }
 
           .series__list {
             margin: 15px 0 22px 0;
@@ -539,10 +588,6 @@
           &__footer {
             max-width: 197px;
             margin: 0 auto;
-
-            .read__article__btn {
-              @include mainBtn();
-            }
 
             @media (max-width: 1023px) {
               max-width: 292px;

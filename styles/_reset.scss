@@ -262,3 +262,11 @@ button {
     display: block;
   }
 }
+
+.main__button {
+  @include mainBtn();
+}
+
+.title__btn {
+  @include titleBtn();
+}

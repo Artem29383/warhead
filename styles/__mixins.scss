@@ -141,23 +141,19 @@
   text-transform: uppercase;
 }
 
-@mixin rightWindowSeries($marginBottom, $marginBottom1440, $display) {
+@mixin rightWindowSeries($display) {
   .right__window__header {
     display: $display;
-    margin-bottom: $marginBottom;
+    margin-bottom: 13px;
 
     @media (max-width: 1440px) {
-      margin-bottom: $marginBottom1440;
+      margin-bottom: 15px;
     }
 
     @media (max-width: 767px) {
       display: flex;
       margin-bottom: 15px;
       width: calc(100% + 3px);
-    }
-
-    &-btn {
-      @include titleBtn();
     }
 
     &-all {
@@ -214,15 +210,15 @@
   }
 }
 
-@mixin rightWindowTemplate($marginBottom, $marginBottom1440) {
+@mixin rightWindowTemplate() {
   padding: 20px 16px 20px 21px;
   width: 100%;
   background: $white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: $marginBottom;
+  margin-bottom: 20px;
 
   @media (max-width: 1440px) {
-    margin-bottom: $marginBottom1440;
+    margin-bottom: 20px;
   }
 }
 
@@ -328,25 +324,25 @@
   }
 }
 
-@mixin cardTitleText($marginBottom, $font, $letterSpace, $maxWidth1024, $displayBlockCardText, $maxWidth768) {
+@mixin cardTitleText() {
   .card__title {
-    font-size: $font;
+    font-size: 24px;
     height: 83px;
     line-height: 30px;
     font-family: BRUTAL_TYPE_BOLD, sans-serif;
-    letter-spacing: $letterSpace;
+    letter-spacing: -0.029em;
     text-transform: uppercase;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.75);
     max-width: 558px;
     width: 100%;
-    margin-bottom: $marginBottom;
+    margin-bottom: 20px;
 
     @media (max-width: 1439px) {
-      max-width: $maxWidth1024;
+      max-width: 558px;
     }
 
     @media (max-width: 1023px) {
-      max-width: $maxWidth768;
+      max-width: 558px;
     }
 
     @media (max-width: 767px) {
@@ -361,7 +357,7 @@
     max-width: 720px;
 
     @media (max-width: 1439px) {
-      display: $displayBlockCardText;
+      display: block;
     }
 
     @media (max-width: 1023px) {
