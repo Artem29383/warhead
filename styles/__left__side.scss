@@ -3,14 +3,6 @@
   width: 100%;
   margin-right: 20px;
 
-  @media (max-width: 1439px) {
-    max-width: 730px;
-  }
-
-  @media (max-width: 1023px) {
-    max-width: 100%;
-  }
-
   &-notepad {
     height: 492px;
     position: relative;
@@ -475,7 +467,6 @@
       margin-top: 36px;
       width: calc(100% + 10px);
 
-
       .all__series__carousel {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -616,7 +607,12 @@
     }
   }
 
+  @media (max-width: 1439px) {
+    max-width: 730px;
+  }
+
   @media (max-width: 1023px) {
+    max-width: 100%;
     margin-right: 0;
   }
 }
