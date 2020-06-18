@@ -227,6 +227,11 @@
       & .recently__text {
         font-size: 15px;
         line-height: 21px;
+        cursor: pointer;
+
+        &:hover {
+          color: $yellow-orange;
+        }
       }
     }
 
