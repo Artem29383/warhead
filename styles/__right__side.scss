@@ -1,23 +1,31 @@
-&__content-right__side {
+&__content_right-side {
   max-width: 251px;
   width: 100%;
 
-  & .right__side-article {
-    @include rightWindowTemplate();
+  & .right-side-article {
     padding: 21px 16px 22px 19px;
+    width: 100%;
+    background: $white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+
+    @include m1440 {
+      margin-bottom: 20px;
+    }
+
     @include vector(8px, 0);
     @include rightWindowSeries(flex);
 
     &__series {
-      @media (max-width: 1440px) {
+      @include m1440 {
         padding: 20px 17px 20px 19px;
       }
 
-      @media (max-width: 1024px) {
+      @include m1024 {
         padding: 19px 17px 19px 19px;
       }
 
-      & .series__title {
+      & .series-title {
         font-size: 20px;
         font-family: BRUTAL_TYPE_BOLD, sans-serif;
         line-height: 24px;
@@ -29,12 +37,12 @@
       .series__list {
         margin: 16px 0 26px 0;
 
-        @media (max-width: 1024px) and (min-width: 770px) {
+        @include between770And1024 {
           margin: 16px 0 28px 0;
         }
       }
 
-      @media (max-width: 1440px) {
+      @include m1440 {
         .series__list {
           &-item {
             padding: 0 0 23px 15px;
@@ -42,7 +50,7 @@
         }
       }
 
-      .series__footer {
+      .series-footer {
         display: flex;
         justify-content: center;
       }
@@ -52,31 +60,31 @@
       padding: 18px 18px 24px 19px;
       margin-bottom: 16px;
 
-      .right__window__header {
+      .article-series-header {
         margin-bottom: 17px;
 
-        @media (max-width: 1440px) {
+        @include m1440 {
           margin-bottom: 20px;
         }
       }
 
-      @media (max-width: 1440px) {
+      @include m1440 {
         padding: 19px 17px 22px 19px;
         margin-bottom: 20px;
       }
 
-      @media (max-width: 1439px) {
+      @include m1439 {
         padding: 18px 17px 25px 19px;
       }
 
-      .tests__body {
+      .tests-body {
         background: url("./../assets/htmlcss.png");
         min-height: 238px;
         padding: 61px 18px 0 20px;
         position: relative;
         margin-bottom: 19px;
 
-        &-text {
+        &__text {
           font-style: normal;
           font-weight: bold;
           font-size: 20px;
@@ -87,30 +95,30 @@
           width: 100%;
         }
 
-        & .footer {
+        & .tests-footer {
           position: absolute;
           bottom: 20px;
           width: 100%;
 
-          @media (max-width: 1440px) {
+          @include m1440 {
             bottom: 21px;
           }
 
-          @media (max-width: 1439px) {
+          @include m1439 {
             bottom: 22px;
           }
         }
 
-        @media (max-width: 1440px) {
+        @include m1440 {
           padding: 58px 18px 0 20px;
           margin-bottom: 20px;
         }
 
-        @media (max-width: 1439px) {
+        @include m1439 {
           padding: 57px 18px 0 20px;
         }
 
-        @media (max-width: 1024px) and (min-width: 770px) {
+        @include between770And1024 {
           padding: 59px 18px 0 20px;
 
           & .footer {
@@ -124,31 +132,31 @@
       padding: 25px 19px 20px 19px;
       margin-bottom: 17px;
 
-      @media (max-width: 1440px) {
+      @include m1440 {
         margin-bottom: 20px;
       }
 
-      .right__window__header {
+      .article-series-header {
         margin-bottom: 23px;
 
-        @media (max-width: 1440px) {
+        @include m1440 {
           margin-bottom: 24px;
         }
       }
 
-      @media (max-width: 1440px) {
+      @include m1440 {
         padding: 21px 17px 20px 19px;
       }
 
-      @media (max-width: 1439px) {
+      @include m1439 {
         padding: 17px 17px 18px 20px;
 
-        .right__window__header {
+        .article-series-header {
           margin-bottom: 26px;
         }
       }
 
-      & .html__body {
+      & .html-body {
         background: url("./../assets/htmlFive.png");
         min-height: 146px;
         margin-bottom: 18px;
@@ -163,12 +171,12 @@
           height: 32px;
         }
 
-        @media (max-width: 1440px) and (min-width: 1439px) {
+        @include between1439And1440 {
           margin-bottom: 16px;
         }
       }
 
-      & .html__text {
+      & .html-text {
         font-weight: bold;
         font-size: 15px;
         line-height: 21px;
@@ -180,51 +188,51 @@
       position: relative;
       padding: 22px 18px 22px 20px;
 
-      @media (max-width: 1440px) and (min-width: 1439px) {
+      @include between1439And1440 {
         padding: 20px 17px 20px 20px;
       }
 
-      @media (max-width: 1024px) {
+      @include m1024 {
         padding: 19px 16px 23px 20px;
       }
 
-      .right__window__header {
+      .article-series-header {
         margin-bottom: 19px;
 
-        @media (max-width: 1440px) {
+        @include m1440 {
           margin-bottom: 20px;
         }
       }
 
       color: $mine-shaft;
 
-      & .recently__date {
+      & .recently-date {
         font-weight: bold;
         font-size: 15px;
         margin-bottom: 8px;
         line-height: 21px;
 
-        @media (max-width: 1024px) {
+        @include m1024 {
           margin-bottom: 5px;
         }
       }
 
-      & .recently__time {
+      & .recently-time {
         font-size: 14px;
         line-height: 24px;
         color: $cutty;
         margin-bottom: 4px;
 
-        @media (max-width: 1440px) and (min-width: 1439px) {
+        @include between1439And1440 {
           margin-bottom: 4px;
         }
 
-        @media (max-width: 1439px) {
+        @include m1439 {
           margin-bottom: 7px;
         }
       }
 
-      & .recently__text {
+      & .recently-text {
         font-size: 15px;
         line-height: 21px;
         cursor: pointer;
@@ -235,7 +243,7 @@
       }
     }
 
-    @media (max-width: 1023px) {
+    @include m1023 {
       display: none;
     }
   }

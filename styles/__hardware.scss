@@ -13,7 +13,7 @@
   &__burger {
     display: none;
 
-    @media (max-width: 1023px) {
+    @include m1023 {
       display: block;
       top: 16px;
       left: 16px;
@@ -24,10 +24,10 @@
     }
   }
 
-  &__logo__mobile {
+  &__logo-mobile {
     display: none;
 
-    @media (max-width: 767px) {
+    @include m767 {
       display: block;
       width: 35px;
       height: 34px;
@@ -44,19 +44,33 @@
     position: relative;
     margin: 3px 0 4px 0;
 
-    @media (max-width: 1440px) {
+    &_title {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      max-width: 326px;
+      height: 40px;
+      width: 100%;
+
+      @include between321And768 {
+        top: 52%;
+      }
+    }
+
+    @include m1440 {
       margin: 5px 0 4px 0;
     }
 
-    @media (max-width: 1439px) {
+    @include m1439 {
       margin: 12px 23px 4px 0;
     }
 
-    @media (max-width: 1023px) {
+    @include m1023 {
       margin: 0;
     }
 
-    @media (max-width: 767px) {
+    @include m767 {
       display: none;
 
       & .vector {
@@ -65,23 +79,9 @@
     }
   }
 
-  &__title {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    max-width: 326px;
-    height: 40px;
-    width: 100%;
-
-    @media (max-width: 768px) and (min-width: 321px) {
-      top: 52%;
-    }
-  }
-
   @include vector(0px, 1);
 
-  @media (max-width: 768px) {
+  @include m768 {
     .vector {
       &:nth-child(1) {
         left: 0;
@@ -114,11 +114,11 @@
     line-height: 22px;
     font-family: "PT Sans Caption", Arial, sans-serif;
 
-    @media (max-width: 1439px) {
+    @include m1439 {
       max-width: 550px;
     }
 
-    @media (max-width: 1023px) {
+    @include m1023 {
       display: none;
     }
   }
@@ -131,29 +131,29 @@
     right: 21px;
     position: absolute;
 
-    @media (max-width: 1439px) {
+    @include m1439 {
       top: 16px;
       right: 15px;
     }
 
-    @media (max-width: 767px) {
+    @include m767 {
       top: 50%;
       transform: translateY(-50%);
     }
   }
 
-  @media (max-width: 1439px) {
+  @include m1439 {
     padding: 37px 49px 40px 31px;
   }
 
-  @media (max-width: 1023px) {
+  @include m1023 {
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  @media (max-width: 767px) {
+  @include m767 {
     height: 48px;
 
     &__search {

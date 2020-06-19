@@ -11,18 +11,18 @@
   &__burger {
     height: 15px;
     width: 16px;
-    fill: #333;
+    fill: $mine-shaft;
     margin: 0 23px 0 47px;
 
-    @media (max-width: 1440px) {
+    @include m1440 {
       margin: 0 26px 0 47px;
     }
 
-    @media (max-width: 1439px) {
+    @include m1439 {
       margin: 0 14px 0 38px;
     }
 
-    @media (max-width: 1023px) {
+    @include m1023 {
       display: none;
     }
   }
@@ -32,7 +32,7 @@
     width: 100%;
     display: flex;
 
-    &-item {
+    &_item {
       font-size: 16px;
       line-height: 22px;
       color: $black;
@@ -42,15 +42,15 @@
       letter-spacing: -0.02em;
       padding: 4px 13px 4px 14px;
 
-      &__search {
+      &-search {
         display: none;
 
-        @media (max-width: 1023px) {
+        @include m1023 {
           display: block;
           margin: 0 0 0 10px;
         }
 
-        @media (max-width: 767px) {
+        @include m767 {
           display: none;
         }
       }
@@ -60,40 +60,40 @@
         border-radius: 2px;
         color: $white;
 
-        @media (max-width: 1024px) {
+        @include m1024 {
           background-color: $white;
           color: $black;
         }
       }
 
-      @media (max-width: 1023px) {
+      @include m1023 {
         margin-right: 56px;
       }
 
-      @media (max-width: 767px) {
+      @include m767 {
         margin: 0;
         padding: 0;
       }
 
-      @media (max-width: 320px) {
+      @include m320 {
         font-size: 14px;
       }
     }
 
-    @media (max-width: 1023px) {
+    @include m1023 {
       max-width: 100%;
       justify-content: space-between;
       margin-left: 7px;
     }
 
-    @media (max-width: 767px) {
+    @include m767 {
       width: 100%;
       overflow-x: auto;
       max-width: 100%;
       justify-content: space-around;
     }
 
-    @media (max-width: 320px) {
+    @include m320 {
       max-width: 307px;
       padding: 3px 2px 0 0;
       margin-left: 7px;
@@ -103,19 +103,19 @@
   &__search {
     height: 15px;
     width: 14px;
-    fill: #333;
+    fill: $mine-shaft;
     margin: 0 12px 0 auto;
 
-    @media (max-width: 1439px) {
+    @include m1439 {
       margin: 0 22px 0 auto;
     }
 
-    @media (max-width: 1023px) {
+    @include m1023 {
       display: none;
     }
   }
 
-  @media (max-width: 767px) {
+  @include m767 {
     top: 48px;
   }
 }

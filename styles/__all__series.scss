@@ -1,0 +1,173 @@
+.all-series {
+  &__header {
+    color: $black;
+
+    @include m767 {
+      display: none;
+    }
+
+    &-title {
+      font-size: 28px;
+      line-height: 22px;
+      font-family: "PT Sans Caption", sans-serif;
+      letter-spacing: -0.04em;
+
+      @include between329And768 {
+        font-size: 29px;
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 36px;
+    width: calc(100% + 10px);
+
+    &-carousel {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 10px 0 10px 10px;
+      overflow: hidden;
+      margin: -10px 0 -10px -10px;
+
+      &_item {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        width: 380px;
+        margin-right: 29px;
+        padding: 25px 25px 30px 18px;
+        @include seriesList(100%, 0 0 22px 17px, 16px 0 18px 0, 0 0 23px 19px);
+        @include rightWindowSeries(none);
+
+        .right__window__header {
+          margin-bottom: 17px;
+
+          @include m1440 {
+            margin-bottom: 20px;
+          }
+
+          @include m767 {
+            margin-bottom: 15px;
+          }
+        }
+
+        .series-content {
+          &__title {
+            font-family: BRUTAL_TYPE_BOLD, sans-serif;
+            font-size: 20px;
+            line-height: 24px;
+            max-width: 250px;
+            color: $mine-shaft;
+
+            @include m1439 {
+              margin-bottom: 16px;
+            }
+
+            @include m1023 {
+              margin-bottom: 15px;
+            }
+
+            @include m767 {
+              margin-bottom: 0;
+              letter-spacing: -0.1px;
+            }
+          }
+
+          &__list {
+            margin: 15px 0 22px 0;
+
+            &_item {
+              padding: 0 0 23px 20px;
+
+              @include m1440 {
+                padding: 0 0 22px 18px;
+              }
+
+              @include m1439 {
+                padding: 0 0 23px 19px;
+              }
+
+              @include m767 {
+                padding: 0 0 14px 14px;
+                max-width: 208px;
+              }
+            }
+
+            @include m1440 {
+              margin: 15px 0 25px 0;
+            }
+
+            @include m1439 {
+              margin: 15px 0 22px 2px;
+            }
+
+            @include m1023 {
+              margin: 15px 0 32px 0;
+            }
+          }
+        }
+
+        &-footer {
+          max-width: 197px;
+          margin: 0 auto;
+
+          @include m1023 {
+            max-width: 292px;
+          }
+        }
+
+        @include m1440 {
+          padding: 22px 25px 30px 20px;
+        }
+
+        @include between1024And1439 {
+          padding: 21px 17px 30px 19px;
+          width: 350px;
+        }
+
+        @include m1023 {
+          width: 325px;
+          margin-right: 20px;
+          padding: 19px 18px 21px 20px;
+        }
+
+        @include m767 {
+          padding: 18px 23px 30px 21px;
+          width: 289px;
+        }
+      }
+
+      &_item:last-child {
+        margin-right: 0;
+      }
+
+      @include m576 {
+        width: 305px;
+      }
+    }
+
+    @include m1440 {
+      margin-top: 41px;
+    }
+
+    @include m1439 {
+      margin-top: 42px;
+    }
+
+    @include m1023 {
+      margin-top: 50px;
+      width: 100%;
+    }
+
+    @include m767 {
+      margin-top: 28px;
+    }
+
+    @include between322And576 {
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  @include m1023 {
+    padding-left: 14px;
+  }
+}

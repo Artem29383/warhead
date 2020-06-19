@@ -3,17 +3,17 @@
   background-color: $white;
   margin-top: 48px;
 
-  @media (max-width: 1439px) {
+  @include m1439 {
     padding: 37px 11px 30px 12px;
     margin-top: 40px;
   }
 
-  @media (max-width: 1023px) {
+  @include m1023 {
     padding: 37px 0 30px 0;
     margin-top: 46px;
   }
 
-  @media (max-width: 767px) {
+  @include m767 {
     margin-top: 33px;
   }
 
@@ -30,17 +30,17 @@
     font-family: PT_SANS_CAPTION, sans-serif;
     margin-bottom: 40px;
 
-    @media (max-width: 1439px) {
+    @include m1439 {
       margin-bottom: 45px;
     }
 
-    @media (max-width: 1023px) {
+    @include m1023 {
       margin-bottom: 42px;
       transform: translate(14px);
       width: calc(100% - 14px);
     }
 
-    @media (max-width: 767px) {
+    @include m767 {
       margin-bottom: 22px;
       font-size: 20px;
       transform: translate(12px);
@@ -70,33 +70,47 @@
       }
     }
 
-    @media (max-width: 1439px) {
+    @include m1439 {
       display: none;
     }
   }
 
-  @include statistics(10px);
-  .footer__block {
+  .statistics {
     display: flex;
-    width: calc(100% - 40px);
-    position: absolute;
-    bottom: 30px;
     justify-content: space-between;
-    @include footer(0px);
+    max-width: 169px;
+    margin-top: 10px;
+    width: 100%;
 
-    @media (max-width: 1439px) {
-      bottom: 32px;
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-svg {
+        width: 16px;
+        cursor: pointer;
+        height: 14px;
+        margin-right: 5px;
+      }
+
+      &-text {
+        font-size: 10px;
+        font-family: "PT Sans Caption", Arial, sans-serif;
+        line-height: 16px;
+      }
     }
 
-    @media (max-width: 1023px) {
-      bottom: 15px;
-      left: 31px;
-      display: block;
+    @include m1439 {
+      margin-top: 0;
     }
 
-    @media (max-width: 767px) {
-      bottom: 24px;
-      left: 14px;
+    @include m1023 {
+      margin-top: 9px;
+    }
+
+    @include m767 {
+      margin-top: 12px;
     }
   }
 

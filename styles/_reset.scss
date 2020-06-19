@@ -237,11 +237,11 @@ body {
   margin: 0 auto;
   position: relative;
 
-  @media (max-width: 1439px) {
+  @include m1439 {
     max-width: 1024px;
   }
 
-  @media (max-width: 1023px) {
+  @include m1023 {
     max-width: 100%;
   }
 }
@@ -258,15 +258,59 @@ button {
 .break__1024 {
   display: none;
 
-  @media (max-width: 1439px) and (min-width: 320px)  {
+  @media (max-width: $s1439) and (min-width: $s320)  {
     display: block;
   }
 }
 
-.main__button {
-  @include mainBtn();
+.main-button {
+  background: $yellow-orange;
+  border-radius: 2px;
+  border: none;
+  font-size: 14px;
+  line-height: 18px;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.02em;
+  display: flex;
+  width: 100%;
+  padding: 7px 0;
+  color: $white;
+  font-family: BRUTAL_TYPE, sans-serif;
+
+  &:hover {
+    background-color: $buttercup;
+  }
+
+  @include m1440 {
+    line-height: 11px;
+    padding: 10px 0;
+  }
+
+  @include m1024 {
+    &:hover {
+      background-color: $yellow-orange;
+    }
+  }
 }
 
 .title__btn {
-  @include titleBtn();
+  background: $mine-shaft;
+  border-radius: 2px;
+  font-size: 14px;
+  min-width: 92px;
+  display: flex;
+  color: $white;
+  font-family: BRUTAL_TYPE, sans-serif;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

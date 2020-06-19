@@ -1,0 +1,340 @@
+.articles-today {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__title {
+    font-size: 24px;
+    height: 83px;
+    line-height: 30px;
+    font-family: BRUTAL_TYPE_BOLD, sans-serif;
+    letter-spacing: -0.029em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.75);
+    max-width: 558px;
+    width: 100%;
+    margin-bottom: 20px;
+
+    @include m1439 {
+      max-width: 558px;
+    }
+
+    @include m1023 {
+      max-width: 558px;
+    }
+
+    @include m767 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 720px;
+
+    @include m1439{
+      display: block;
+    }
+
+    @include m1023 {
+      display: none;
+    }
+  }
+
+  &__button {
+    border: none;
+    height: 24px;
+    color: $white;
+    background: $yellow-orange;
+    border-radius: 2px;
+    max-width: 118px;
+    width: 100%;
+    font-family: BRUTAL_TYPE_MEDIUM, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 42px;
+
+    @include m1439{
+      margin-bottom: 39px;
+    }
+
+    @include m1023 {
+      margin-bottom: 26px;
+    }
+
+    @include m767 {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item {
+    @include vector(8px, 0);
+    position: relative;
+    font-size: 10px;
+
+    &_footer {
+      width: 100%;
+      position: absolute;
+      bottom: 30px;
+      left: 17px;
+      display: block;
+      @include footer(10px);
+
+      @include m1440 {
+        bottom: 30px;
+        left: 18px;
+      }
+
+      @include m1439{
+        bottom: 31px;
+        left: 19px;
+      }
+
+      @include m1023 {
+        bottom: 14px;
+        left: 31px;
+        width: calc(100% - 31px);
+      }
+
+      @include m767 {
+        bottom: 24px;
+        left: 13px;
+      }
+    }
+
+    &-1 {
+      height: 492px;
+      width: 100%;
+      margin-bottom: 25px;
+      padding: 150px 20px 30px 20px;
+      background: center / cover url('./../assets/notepad.png');
+      background-size: cover;
+
+      .articles-today__item_footer {
+        display: flex;
+        width: calc(100% - 40px);
+        position: absolute;
+        bottom: 30px;
+        justify-content: space-between;
+        @include footer(0px);
+
+        @include m1439{
+          bottom: 32px;
+        }
+
+        @include m1023 {
+          bottom: 15px;
+          left: 31px;
+          display: block;
+        }
+
+        @include m767 {
+          bottom: 24px;
+          left: 14px;
+        }
+      }
+
+      .statistics {
+        margin-top: 4px;
+
+        @include m768 {
+          margin-top: 9px;
+        }
+      }
+
+      @include m1439{
+        background: center / cover url("./../assets/notepad1024.png");
+
+        .articles-today__title {
+          margin-bottom: 22px;
+
+          @include m320 {
+            letter-spacing: -0.025em;
+          }
+        }
+      }
+
+      @include m1023 {
+        height: 386px;
+        padding: 71px 20px 30px 20px;
+        background: center / cover url("./../assets/notepad768.png");
+        margin-bottom: 14px;
+      }
+
+      @include m767 {
+        padding: 115px 20px 30px 14px;
+        background: center / cover url("./../assets/notepad320.png") no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &-2 {
+      position: relative;
+      max-width: 517px;
+      width: 100%;
+      padding: 85px 26px 30px 20px;
+      height: 492px;
+      background: center / cover url('./../assets/work.png');
+      background-size: cover;
+
+      .articles-today__title {
+        margin-bottom: 40px;
+        font-size: 24px;
+        letter-spacing: -0.025em;
+
+        @include m1439{
+          max-width: 100%;
+        }
+
+        @include m1023 {
+          max-width: 520px;
+        }
+
+      }
+
+      .articles-today__text {
+        max-width: 430px;
+
+        @include m1439{
+          display: none;
+        }
+      }
+
+      &:hover .vector {
+        opacity: 1;
+
+        @include m1024 {
+          opacity: 0;
+        }
+      }
+
+      @include m1439{
+        max-width: 354px;
+        background: center / cover url('./../assets/work1024.png');
+      }
+
+      @include m1023 {
+        max-width: 100%;
+        padding: 71px 26px 30px 20px;
+        background: center / cover url('./../assets/work768.png');
+        margin-bottom: 15px;
+        height: 386px;
+      }
+
+      @include m767 {
+        padding: 115px 0 30px 13px;
+        background: center / cover url("./../assets/work320.png") no-repeat;
+        background-size: cover;
+
+        & .articles-today__button {
+          max-width: 105px;
+        }
+
+        .articles-today__title {
+          font-size: 19.3px;
+          letter-spacing: normal;
+        }
+      }
+    }
+
+    &-3 {
+      position: relative;
+      height: 492px;
+      margin-left: auto;
+      margin-bottom: 28px;
+      padding: 85px 20px 30px 20px;
+      max-width: 247px;
+      width: 100%;
+      background: center / cover url('./../assets/claster.png');
+
+      .articles-today__title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        letter-spacing: -0.03em;
+
+        @include m1439{
+          max-width: 217px;
+        }
+
+        @include m1023 {
+          max-width: 520px;
+        }
+      }
+
+      &:hover .vector {
+        opacity: 1;
+
+        @include m1024 {
+          opacity: 0;
+        }
+      }
+
+      @include m1439{
+        max-width: 354px;
+        margin-bottom: 26px;
+        background: center / cover url('./../assets/claster1024.png');
+      }
+
+      @include m1023 {
+        max-width: 100%;
+        height: 386px;
+        padding: 71px 26px 30px 20px;
+        background: center / cover url('./../assets/claster768.png');
+
+        .articles-today__title {
+          font-size: 24px;
+          letter-spacing: -0.025em;
+        }
+      }
+
+      @include m767 {
+        padding: 115px 20px 30px 13px;
+        margin-bottom: 29px;
+        background: center / cover url("./../assets/claster320.png") no-repeat;
+        background-size: cover;
+
+        & .articles-today__button {
+          max-width: 105px;
+        }
+
+        .articles-today__title {
+          font-size: 19.3px;
+          letter-spacing: normal;
+        }
+      }
+    }
+  }
+
+  &__final {
+    width: 100%;
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 26px;
+    transform: translateX(-2px);
+
+    &_text {
+      color: $mine-shaft;
+    }
+
+    @include m1439{
+      margin-left: -1px;
+      margin-bottom: 25px;
+    }
+
+    @include m1023 {
+      padding: 1px 14px 0 18px;
+      margin-bottom: 29px;
+    }
+
+    @include m767 {
+      padding: 0 14px 0 17px;
+      margin: 0 0 29px 2px;
+    }
+  }
+}

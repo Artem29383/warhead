@@ -1,43 +1,87 @@
-@mixin statistics($margin) {
-  .statistics {
-    display: flex;
-    justify-content: space-between;
-    max-width: 169px;
-    margin-top: $margin;
-    width: 100%;
-
-    &__item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &-svg {
-        width: 16px;
-        cursor: pointer;
-        height: 14px;
-        margin-right: 5px;
-      }
-
-      &-text {
-        font-size: 10px;
-        font-family: "PT Sans Caption", Arial, sans-serif;
-        line-height: 16px;
-      }
-    }
-
-    @media (max-width: 1439px) {
-      margin-top: 0;
-    }
-
-    @media (max-width: 1023px) {
-      margin-top: 9px;
-    }
-
-    @media (max-width: 767px) {
-      margin-top: 12px;
-    }
+@mixin m320 {
+  @media (max-width: $s320) {
+    @content;
   }
 }
+
+@mixin between322And576 {
+  @media (max-width: $s576) and (min-width: $s322) {
+    @content;
+  }
+}
+
+@mixin between329And768 {
+  @media (max-width: $s768) and (min-width: $s329) {
+    @content;
+  }
+}
+
+@mixin between321And768 {
+  @media (max-width: $s768) and (min-width: $s321) {
+    @content;
+  }
+}
+
+@mixin between770And1024 {
+  @media (max-width: $s1024) and (min-width: $s770) {
+    @content;
+  }
+}
+
+@mixin between1024And1439 {
+  @media (max-width: $s1439) and (min-width: $s1024) {
+    @content;
+  }
+}
+
+@mixin between1439And1440 {
+  @media (max-width: $s1440) and (min-width: $s1439) {
+    @content;
+  }
+}
+
+@mixin m576 {
+  @media (max-width: $s576) {
+    @content;
+  }
+}
+
+@mixin m767 {
+  @media (max-width: $s767) {
+    @content;
+  }
+}
+
+@mixin m768 {
+  @media (max-width: $s768) {
+    @content;
+  }
+}
+
+@mixin m1023 {
+  @media (max-width: $s1023) {
+    @content;
+  }
+}
+
+@mixin m1024 {
+  @media (max-width: $s1024) {
+    @content;
+  }
+}
+
+@mixin m1439 {
+  @media (max-width: $s1439) {
+    @content;
+  }
+}
+
+@mixin m1440 {
+  @media (max-width: $s1440) {
+    @content;
+  }
+}
+
 
 @mixin vector($pixel, $opacity) {
   .vector {
@@ -74,83 +118,49 @@
   &:hover .vector {
     opacity: 1;
 
-    @media (max-width: 1024px) {
+    @include m1024 {
       opacity: 0;
     }
   }
 }
 
 @mixin footer($marginBottom1024) {
-  .footer {
+  &-info {
     width: 100%;
     max-width: 294px;
+  }
 
-    &-author {
-      font-weight: bold;
-      font-size: 15px;
-      line-height: 24px;
-      max-width: 294px;
+  &-author {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 24px;
+    max-width: 294px;
 
-      @media (max-width: 1439px) {
-        margin-bottom: $marginBottom1024;
-      }
-
-      @media (max-width: 320px) {
-        margin-bottom: 13px;
-      }
-
-      &__time {
-        font-weight: normal;
-        font-size: 10px;
-      }
+    @include m1439 {
+      margin-bottom: $marginBottom1024;
     }
+
+    @include m320 {
+      margin-bottom: 13px;
+    }
+  }
+
+  &-time {
+    font-weight: normal;
+    font-size: 10px;
   }
 }
 
-@mixin doButton() {
-  border: none;
-  height: 24px;
-  color: $white;
-  background: $yellow-orange;
-  border-radius: 2px;
-  max-width: 118px;
-  width: 100%;
-  font-family: BRUTAL_TYPE_MEDIUM, sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-bottom: 42px;
-}
-
-@mixin titleBtn() {
-  background: #333333;
-  border-radius: 2px;
-  font-size: 14px;
-  min-width: 92px;
-  display: flex;
-  color: $white;
-  font-family: BRUTAL_TYPE, sans-serif;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
 @mixin rightWindowSeries($display) {
-  .right__window__header {
+  .article-series-header {
     display: $display;
     margin-bottom: 13px;
 
-    @media (max-width: 1440px) {
+    @include m1440 {
       margin-bottom: 15px;
     }
 
-    @media (max-width: 767px) {
+    @include m767 {
       display: flex;
       margin-bottom: 15px;
       width: calc(100% + 3px);
@@ -171,7 +181,7 @@
         &:hover {
           text-decoration: underline;
 
-          @media (max-width: 1024px) {
+          @include m1024 {
             text-decoration: none;
           }
         }
@@ -180,70 +190,27 @@
   }
 }
 
-@mixin mainBtn() {
-  background: $yellow-orange;
-  border-radius: 2px;
-  border: none;
-  font-size: 14px;
-  line-height: 18px;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 0.02em;
-  display: flex;
-  width: 100%;
-  padding: 7px 0;
-  color: $white;
-  font-family: BRUTAL_TYPE, sans-serif;
-
-  &:hover {
-    background-color: $buttercup;
-  }
-
-  @media (max-width: 1440px) {
-    line-height: 11px;
-    padding: 10px 0;
-  }
-
-  @media (max-width: 1024px) {
-    &:hover {
-      background-color: $yellow-orange;
-    }
-  }
-}
-
-@mixin rightWindowTemplate() {
-  padding: 20px 16px 20px 21px;
-  width: 100%;
-  background: $white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-
-  @media (max-width: 1440px) {
-    margin-bottom: 20px;
-  }
-}
-
 @mixin seriesList($maxWidth, $padding, $margin1024, $padding1439) {
-  .series__list {
+  .series-content__list {
     width: 100%;
     padding-top: 10px;
     border-left: 1px solid $gray;
     position: relative;
-    margin: 16px 0 22px 0;
+    margin: 16px 0 26px 0;
 
-    @media (max-width: 1440px) {
+    @include m1440 {
       margin: 16px 0 27px 0;
     }
 
-    @media (max-width: 1439px) {
+    @include m1439 {
       margin: $margin1024;
     }
 
-    @media (max-width: 1023px) {
+    @include m1023 {
       margin: 15px 0 31px 1px;
     }
 
-    @media (max-width: 767px) {
+    @include m767 {
       margin: 14px 0 37px 0;
       padding-top: 11px;
     }
@@ -271,7 +238,7 @@
       background: linear-gradient(180.86deg, rgba(255, 255, 255, 0) 0.23%, $white 74.8%);
     }
 
-    &-item {
+    &_item {
       max-width: $maxWidth;
       width: 100%;
       font-size: 15px;
@@ -283,15 +250,15 @@
         a {
           color: $yellow-orange;
 
-          @media (max-width: 1024px) {
-            color: #333;
+          @include m1024 {
+            color: $mine-shaft;
           }
         }
 
         &::after {
           background: $yellow-orange;;
 
-          @media (max-width: 1024px) {
+          @include m1024 {
             background: $gray;
           }
         }
@@ -310,59 +277,17 @@
       }
 
       a {
-        color: #333;
+        color: $mine-shaft;
         text-decoration: none;
       }
 
-      @media (max-width: 1439px) {
+      @include m1439 {
         padding: $padding1439;
       }
     }
 
-    &-item:last-child {
+    &_item:last-child {
       padding-bottom: 0;
-    }
-  }
-}
-
-@mixin cardTitleText() {
-  .card__title {
-    font-size: 24px;
-    height: 83px;
-    line-height: 30px;
-    font-family: BRUTAL_TYPE_BOLD, sans-serif;
-    letter-spacing: -0.029em;
-    text-transform: uppercase;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.75);
-    max-width: 558px;
-    width: 100%;
-    margin-bottom: 20px;
-
-    @media (max-width: 1439px) {
-      max-width: 558px;
-    }
-
-    @media (max-width: 1023px) {
-      max-width: 558px;
-    }
-
-    @media (max-width: 767px) {
-      font-size: 20px;
-      line-height: 28px;
-    }
-  }
-
-  .card__text {
-    font-size: 18px;
-    line-height: 24px;
-    max-width: 720px;
-
-    @media (max-width: 1439px) {
-      display: block;
-    }
-
-    @media (max-width: 1023px) {
-      display: none;
     }
   }
 }
