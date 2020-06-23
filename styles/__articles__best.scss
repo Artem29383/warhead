@@ -3,11 +3,11 @@
     margin-bottom: 30px;
     padding-right: 3px;
 
-    @include m1023 {
+    @include mediaTabletsLaptopsMin {
       margin-bottom: 27px;
     }
 
-    @include m767 {
+    @include mediaTabletsMin {
       margin-bottom: 21px;
     }
   }
@@ -36,12 +36,12 @@
         margin-top: 5px;
         transition: opacity 0.2s linear;
 
-        @include m1023 {
+        @include mediaTabletsLaptopsMin {
           padding-top: 4px;
           margin-top: 7px;
         }
 
-        @include m767 {
+        @include mediaTabletsMin {
           margin-top: 2px;
           padding-top: 1px;
         }
@@ -55,11 +55,11 @@
         margin-left: 54px;
       }
 
-      @include m1439 {
+      @include mediaExtraScreenMin {
         margin-left: 47px;
       }
 
-      @include m1023 {
+      @include mediaTabletsLaptopsMin {
         margin-left: 49px;
       }
     }
@@ -68,11 +68,11 @@
       margin-left: 0;
     }
 
-    @include m767 {
+    @include mediaTabletsMin {
       flex-basis: 100%;
     }
 
-    @include m767 {
+    @include mediaTabletsMin {
       &_item:not(:first-child) {
         margin-left: 31px;
       }
@@ -80,7 +80,7 @@
   }
 
   &__nav {
-    @include m767 {
+    @include mediaTabletsMin {
       display: none;
     }
   }
@@ -88,7 +88,7 @@
   &__nav-mobile {
     display: none;
 
-    @include m767 {
+    @include mediaTabletsMin {
       display: flex;
     }
   }
@@ -132,7 +132,7 @@
           color: $white;
           text-shadow: 0 1px 1px rgba(0, 0, 0, 0.33);
 
-          @include m767 {
+          @include mediaTabletsMin {
             letter-spacing: 0.02em;
             font-size: 14px;
           }
@@ -144,54 +144,54 @@
           left: 16px;
           width: 100%;
 
-          @include m1439 {
+          @include mediaExtraScreenMin {
             left: 20px;
           }
 
-          @include m320 {
+          @include mediaMobile {
             left: 18px;
             bottom: 19px;
           }
         }
 
-        @include m1439 {
+        @include mediaExtraScreenMin {
           width: 250px;
           padding: 14px 20px 20px 19px;
         }
 
-        @include m1023 {
+        @include mediaTabletsLaptopsMin {
           padding: 14px 20px 20px 21px;
         }
 
-        @include m767 {
+        @include mediaTabletsMin {
           padding: 15px 0 20px 19px;
         }
       }
 
-      @include m1439 {
+      @include mediaExtraScreenMin {
         grid-gap: 19px;
       }
 
-      @include m320 {
+      @include mediaMobile {
         grid-gap: 16px;
       }
     }
 
-    @include m1439 {
+    @include mediaExtraScreenMin {
       max-width: 730px;
       margin-bottom: 34px;
     }
 
-    @include m1023 {
+    @include mediaTabletsLaptopsMin {
       max-width: 100%;
     }
 
-    @include m767 {
+    @include mediaTabletsMin {
       margin-bottom: 0;
     }
   }
 
-  @include m1023 {
+  @include mediaTabletsLaptopsMin {
     padding-left: 15px;
   }
 }

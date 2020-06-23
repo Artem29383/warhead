@@ -13,7 +13,7 @@
   &__burger {
     display: none;
 
-    @include m1023 {
+    @include mediaTabletsLaptopsMin {
       display: block;
       top: 16px;
       left: 16px;
@@ -27,7 +27,7 @@
   &__logo-mobile {
     display: none;
 
-    @include m767 {
+    @include mediaTabletsMin {
       display: block;
       width: 35px;
       height: 34px;
@@ -52,25 +52,21 @@
       max-width: 326px;
       height: 40px;
       width: 100%;
-
-      @include between321And768 {
-        top: 52%;
-      }
     }
 
-    @include m1440 {
+    @include mediaExtraScreenMax {
       margin: 5px 0 4px 0;
     }
 
-    @include m1439 {
+    @include mediaExtraScreenMin {
       margin: 12px 23px 4px 0;
     }
 
-    @include m1023 {
+    @include mediaTabletsLaptopsMin {
       margin: 0;
     }
 
-    @include m767 {
+    @include mediaTabletsMin {
       display: none;
 
       & .vector {
@@ -80,9 +76,8 @@
   }
 
   @include vector(0px, 1);
-
-  @include m768 {
-    .vector {
+  .vector {
+    @include mediaTabletsMax {
       &:nth-child(1) {
         left: 0;
         top: 2px;
@@ -106,6 +101,10 @@
         transform: rotate(-180deg);
       }
     }
+
+    &:hover .vector {
+      opacity: 1;
+    }
   }
 
   &__text {
@@ -114,11 +113,11 @@
     line-height: 22px;
     font-family: "PT Sans Caption", Arial, sans-serif;
 
-    @include m1439 {
+    @include mediaExtraScreenMin {
       max-width: 550px;
     }
 
-    @include m1023 {
+    @include mediaTabletsLaptopsMin {
       display: none;
     }
   }
@@ -131,29 +130,29 @@
     right: 21px;
     position: absolute;
 
-    @include m1439 {
+    @include mediaExtraScreenMin {
       top: 16px;
       right: 15px;
     }
 
-    @include m767 {
+    @include mediaTabletsMin {
       top: 50%;
       transform: translateY(-50%);
     }
   }
 
-  @include m1439 {
+  @include mediaExtraScreenMin {
     padding: 37px 49px 40px 31px;
   }
 
-  @include m1023 {
+  @include mediaTabletsLaptopsMin {
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  @include m767 {
+  @include mediaTabletsMin {
     height: 48px;
 
     &__search {

@@ -237,11 +237,11 @@ body {
   margin: 0 auto;
   position: relative;
 
-  @include m1439 {
+  @include mediaExtraScreenMin {
     max-width: 1024px;
   }
 
-  @include m1023 {
+  @include mediaTabletsLaptopsMin {
     max-width: 100%;
   }
 }
@@ -258,7 +258,7 @@ button {
 .break__1024 {
   display: none;
 
-  @media (max-width: $s1439) and (min-width: $s320)  {
+  @media (max-width: $media-extra-screen-min) and (min-width: $media-mobile)  {
     display: block;
   }
 }
@@ -282,12 +282,12 @@ button {
     background-color: $buttercup;
   }
 
-  @include m1440 {
+  @include mediaExtraScreenMax {
     line-height: 11px;
     padding: 10px 0;
   }
 
-  @include m1024 {
+  @include mediaTabletsLaptopsMax {
     &:hover {
       background-color: $yellow-orange;
     }

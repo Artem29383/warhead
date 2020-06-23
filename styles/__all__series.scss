@@ -2,7 +2,7 @@
   &__header {
     color: $black;
 
-    @include m767 {
+    @include mediaTabletsMin {
       display: none;
     }
 
@@ -11,10 +11,6 @@
       line-height: 22px;
       font-family: "PT Sans Caption", sans-serif;
       letter-spacing: -0.04em;
-
-      @include between329And768 {
-        font-size: 29px;
-      }
     }
   }
 
@@ -40,11 +36,11 @@
         .right__window__header {
           margin-bottom: 17px;
 
-          @include m1440 {
+          @include mediaExtraScreenMax {
             margin-bottom: 20px;
           }
 
-          @include m767 {
+          @include mediaTabletsMin {
             margin-bottom: 15px;
           }
         }
@@ -57,15 +53,15 @@
             max-width: 250px;
             color: $mine-shaft;
 
-            @include m1439 {
+            @include mediaExtraScreenMin {
               margin-bottom: 16px;
             }
 
-            @include m1023 {
+            @include mediaTabletsLaptopsMin {
               margin-bottom: 15px;
             }
 
-            @include m767 {
+            @include mediaTabletsMin {
               margin-bottom: 0;
               letter-spacing: -0.1px;
             }
@@ -77,29 +73,29 @@
             &_item {
               padding: 0 0 23px 20px;
 
-              @include m1440 {
+              @include mediaExtraScreenMax {
                 padding: 0 0 22px 18px;
               }
 
-              @include m1439 {
+              @include mediaExtraScreenMin {
                 padding: 0 0 23px 19px;
               }
 
-              @include m767 {
+              @include mediaTabletsMin {
                 padding: 0 0 14px 14px;
                 max-width: 208px;
               }
             }
 
-            @include m1440 {
+            @include mediaExtraScreenMax {
               margin: 15px 0 25px 0;
             }
 
-            @include m1439 {
+            @include mediaExtraScreenMin {
               margin: 15px 0 22px 2px;
             }
 
-            @include m1023 {
+            @include mediaTabletsLaptopsMin {
               margin: 15px 0 32px 0;
             }
           }
@@ -109,27 +105,27 @@
           max-width: 197px;
           margin: 0 auto;
 
-          @include m1023 {
+          @include mediaTabletsLaptopsMin {
             max-width: 292px;
           }
         }
 
-        @include m1440 {
+        @include mediaExtraScreenMax {
           padding: 22px 25px 30px 20px;
         }
 
-        @include between1024And1439 {
+        @include mediaExtraScreenMin {
           padding: 21px 17px 30px 19px;
           width: 350px;
         }
 
-        @include m1023 {
+        @include mediaTabletsLaptopsMin {
           width: 325px;
           margin-right: 20px;
           padding: 19px 18px 21px 20px;
         }
 
-        @include m767 {
+        @include mediaTabletsMin {
           padding: 18px 23px 30px 21px;
           width: 289px;
         }
@@ -139,35 +135,39 @@
         margin-right: 0;
       }
 
-      @include m576 {
+      @media (max-width: $media-mobile-large) {
         width: 305px;
       }
     }
 
-    @include m1440 {
+    @include mediaExtraScreenMax {
       margin-top: 41px;
     }
 
-    @include m1439 {
+    @include mediaExtraScreenMin {
       margin-top: 42px;
     }
 
-    @include m1023 {
+    @include mediaTabletsLaptopsMin {
       margin-top: 50px;
       width: 100%;
     }
 
-    @include m767 {
+    @include mediaTabletsMin {
       margin-top: 28px;
     }
 
-    @include between322And576 {
+    @media (max-width: $media-mobile-large) {
       justify-content: center;
       display: flex;
     }
+
+    @include mediaMobile {
+      display: block;
+    }
   }
 
-  @include m1023 {
+  @include mediaTabletsLaptopsMin {
     padding-left: 14px;
   }
 }

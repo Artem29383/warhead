@@ -9,7 +9,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
 
-    @include m1440 {
+    @include mediaExtraScreenMax {
       margin-bottom: 20px;
     }
 
@@ -17,11 +17,11 @@
     @include rightWindowSeries(flex);
 
     &__series {
-      @include m1440 {
+      @include mediaExtraScreenMax {
         padding: 20px 17px 20px 19px;
       }
 
-      @include m1024 {
+      @include mediaTabletsLaptopsMax {
         padding: 19px 17px 19px 19px;
       }
 
@@ -36,13 +36,9 @@
 
       .series__list {
         margin: 16px 0 26px 0;
-
-        @include between770And1024 {
-          margin: 16px 0 28px 0;
-        }
       }
 
-      @include m1440 {
+      @include mediaExtraScreenMax {
         .series__list {
           &-item {
             padding: 0 0 23px 15px;
@@ -63,17 +59,17 @@
       .article-series-header {
         margin-bottom: 17px;
 
-        @include m1440 {
+        @include mediaExtraScreenMax {
           margin-bottom: 20px;
         }
       }
 
-      @include m1440 {
+      @include mediaExtraScreenMax {
         padding: 19px 17px 22px 19px;
         margin-bottom: 20px;
       }
 
-      @include m1439 {
+      @include mediaExtraScreenMin {
         padding: 18px 17px 25px 19px;
       }
 
@@ -100,30 +96,22 @@
           bottom: 20px;
           width: 100%;
 
-          @include m1440 {
+          @include mediaExtraScreenMax {
             bottom: 21px;
           }
 
-          @include m1439 {
+          @include mediaExtraScreenMin {
             bottom: 22px;
           }
         }
 
-        @include m1440 {
+        @include mediaExtraScreenMax {
           padding: 58px 18px 0 20px;
           margin-bottom: 20px;
         }
 
-        @include m1439 {
+        @include mediaExtraScreenMin {
           padding: 57px 18px 0 20px;
-        }
-
-        @include between770And1024 {
-          padding: 59px 18px 0 20px;
-
-          & .footer {
-            bottom: 21px;
-          }
         }
       }
     }
@@ -132,23 +120,23 @@
       padding: 25px 19px 20px 19px;
       margin-bottom: 17px;
 
-      @include m1440 {
+      @include mediaExtraScreenMax {
         margin-bottom: 20px;
       }
 
       .article-series-header {
         margin-bottom: 23px;
 
-        @include m1440 {
+        @include mediaExtraScreenMax {
           margin-bottom: 24px;
         }
       }
 
-      @include m1440 {
+      @include mediaExtraScreenMax {
         padding: 21px 17px 20px 19px;
       }
 
-      @include m1439 {
+      @include mediaExtraScreenMin {
         padding: 17px 17px 18px 20px;
 
         .article-series-header {
@@ -170,10 +158,6 @@
           width: 32px;
           height: 32px;
         }
-
-        @include between1439And1440 {
-          margin-bottom: 16px;
-        }
       }
 
       & .html-text {
@@ -188,18 +172,18 @@
       position: relative;
       padding: 22px 18px 22px 20px;
 
-      @include between1439And1440 {
-        padding: 20px 17px 20px 20px;
+      @include mediaExtraScreenMax {
+        padding: 18px 18px 22px 20px;
       }
 
-      @include m1024 {
+      @include mediaTabletsLaptopsMax {
         padding: 19px 16px 23px 20px;
       }
 
       .article-series-header {
         margin-bottom: 19px;
 
-        @include m1440 {
+        @include mediaExtraScreenMax {
           margin-bottom: 20px;
         }
       }
@@ -212,7 +196,7 @@
         margin-bottom: 8px;
         line-height: 21px;
 
-        @include m1024 {
+        @include mediaTabletsLaptopsMax {
           margin-bottom: 5px;
         }
       }
@@ -223,11 +207,7 @@
         color: $cutty;
         margin-bottom: 4px;
 
-        @include between1439And1440 {
-          margin-bottom: 4px;
-        }
-
-        @include m1439 {
+        @include mediaExtraScreenMin {
           margin-bottom: 7px;
         }
       }
@@ -243,7 +223,7 @@
       }
     }
 
-    @include m1023 {
+    @include mediaTabletsLaptopsMin {
       display: none;
     }
   }

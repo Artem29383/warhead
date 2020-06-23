@@ -14,15 +14,15 @@
     fill: $mine-shaft;
     margin: 0 23px 0 47px;
 
-    @include m1440 {
+    @include mediaExtraScreenMax {
       margin: 0 26px 0 47px;
     }
 
-    @include m1439 {
+    @include mediaExtraScreenMin {
       margin: 0 14px 0 38px;
     }
 
-    @include m1023 {
+    @include mediaTabletsLaptopsMin {
       display: none;
     }
   }
@@ -45,12 +45,12 @@
       &-search {
         display: none;
 
-        @include m1023 {
+        @include mediaTabletsLaptopsMin {
           display: block;
           margin: 0 0 0 10px;
         }
 
-        @include m767 {
+        @include mediaTabletsMin {
           display: none;
         }
       }
@@ -60,40 +60,40 @@
         border-radius: 2px;
         color: $white;
 
-        @include m1024 {
+        @include mediaTabletsLaptopsMax {
           background-color: $white;
           color: $black;
         }
       }
 
-      @include m1023 {
+      @include mediaTabletsLaptopsMin {
         margin-right: 56px;
       }
 
-      @include m767 {
+      @include mediaTabletsMin {
         margin: 0;
         padding: 0;
       }
 
-      @include m320 {
+      @include mediaMobile {
         font-size: 14px;
       }
     }
 
-    @include m1023 {
+    @include mediaTabletsLaptopsMin {
       max-width: 100%;
       justify-content: space-between;
       margin-left: 7px;
     }
 
-    @include m767 {
+    @include mediaTabletsMin {
       width: 100%;
       overflow-x: auto;
       max-width: 100%;
       justify-content: space-around;
     }
 
-    @include m320 {
+    @include mediaMobile {
       max-width: 307px;
       padding: 3px 2px 0 0;
       margin-left: 7px;
@@ -106,16 +106,16 @@
     fill: $mine-shaft;
     margin: 0 12px 0 auto;
 
-    @include m1439 {
+    @include mediaExtraScreenMin {
       margin: 0 22px 0 auto;
     }
 
-    @include m1023 {
+    @include mediaTabletsLaptopsMin {
       display: none;
     }
   }
 
-  @include m767 {
+  @include mediaTabletsMin {
     top: 48px;
   }
 }

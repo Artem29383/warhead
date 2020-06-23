@@ -3,17 +3,17 @@
   background-color: $white;
   margin-top: 48px;
 
-  @include m1439 {
+  @include mediaExtraScreenMin {
     padding: 37px 11px 30px 12px;
     margin-top: 40px;
   }
 
-  @include m1023 {
+  @include mediaTabletsLaptopsMin {
     padding: 37px 0 30px 0;
     margin-top: 46px;
   }
 
-  @include m767 {
+  @include mediaTabletsMin {
     margin-top: 33px;
   }
 
@@ -30,17 +30,17 @@
     font-family: PT_SANS_CAPTION, sans-serif;
     margin-bottom: 40px;
 
-    @include m1439 {
+    @include mediaExtraScreenMin {
       margin-bottom: 45px;
     }
 
-    @include m1023 {
+    @include mediaTabletsLaptopsMin {
       margin-bottom: 42px;
       transform: translate(14px);
       width: calc(100% - 14px);
     }
 
-    @include m767 {
+    @include mediaTabletsMin {
       margin-bottom: 22px;
       font-size: 20px;
       transform: translate(12px);
@@ -70,7 +70,7 @@
       }
     }
 
-    @include m1439 {
+    @include mediaExtraScreenMin {
       display: none;
     }
   }
@@ -101,15 +101,15 @@
       }
     }
 
-    @include m1439 {
+    @include mediaExtraScreenMin {
       margin-top: 0;
     }
 
-    @include m1023 {
+    @include mediaTabletsLaptopsMin {
       margin-top: 9px;
     }
 
-    @include m767 {
+    @include mediaTabletsMin {
       margin-top: 12px;
     }
   }

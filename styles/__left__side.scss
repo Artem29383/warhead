@@ -6,11 +6,11 @@
   @import "_articles__best";
   @import "_all__series";
 
-  @include m1439 {
+  @include mediaExtraScreenMin {
     max-width: 730px;
   }
 
-  @include m1023 {
+  @include mediaTabletsLaptopsMin {
     max-width: 100%;
     margin-right: 0;
   }
