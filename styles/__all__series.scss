@@ -135,7 +135,7 @@
         margin-right: 0;
       }
 
-      @include mediaTabletsMin {
+      @media (max-width: 576px)  {
         width: 305px;
       }
     }

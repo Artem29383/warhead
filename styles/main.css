@@ -1251,8 +1251,6 @@ button {
   .body__content_left-side .articles-best__nav, .body__content_left-side .articles-best__nav-mobile {
     flex-basis: 100%;
   }
-}
-@media (max-width: 767px) {
   .body__content_left-side .articles-best__nav_item:not(:first-child), .body__content_left-side .articles-best__nav-mobile_item:not(:first-child) {
     margin-left: 31px;
   }
@@ -1682,7 +1680,7 @@ button {
 .body__content_left-side .all-series__content-carousel_item:last-child {
   margin-right: 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 576px) {
   .body__content_left-side .all-series__content-carousel {
     width: 305px;
   }

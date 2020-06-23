@@ -70,9 +70,6 @@
 
     @include mediaTabletsMin {
       flex-basis: 100%;
-    }
-
-    @include mediaTabletsMin {
       &_item:not(:first-child) {
         margin-left: 31px;
       }
