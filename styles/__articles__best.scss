@@ -55,7 +55,7 @@
         margin-left: 54px;
       }
 
-      @include mediaExtraScreenMin {
+      @include mediaTabletsLaptopsMax {
         margin-left: 47px;
       }
 
@@ -144,7 +144,7 @@
           left: 16px;
           width: 100%;
 
-          @include mediaExtraScreenMin {
+          @include mediaTabletsLaptopsMax {
             left: 20px;
           }
 
@@ -154,7 +154,7 @@
           }
         }
 
-        @include mediaExtraScreenMin {
+        @include mediaTabletsLaptopsMax {
           width: 250px;
           padding: 14px 20px 20px 19px;
         }
@@ -168,7 +168,7 @@
         }
       }
 
-      @include mediaExtraScreenMin {
+      @include mediaTabletsLaptopsMax {
         grid-gap: 19px;
       }
 
@@ -177,7 +177,7 @@
       }
     }
 
-    @include mediaExtraScreenMin {
+    @include mediaTabletsLaptopsMax {
       max-width: 730px;
       margin-bottom: 34px;
     }

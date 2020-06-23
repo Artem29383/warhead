@@ -18,7 +18,7 @@
       margin: 0 26px 0 47px;
     }
 
-    @include mediaExtraScreenMin {
+    @include mediaTabletsLaptopsMax {
       margin: 0 14px 0 38px;
     }
 
@@ -106,7 +106,7 @@
     fill: $mine-shaft;
     margin: 0 12px 0 auto;
 
-    @include mediaExtraScreenMin {
+    @include mediaTabletsLaptopsMax {
       margin: 0 22px 0 auto;
     }
 

@@ -4,20 +4,8 @@
   }
 }
 
-@mixin mediaMobileLarge {
-  @media (max-width: $media-mobile-large) {
-    @content;
-  }
-}
-
 @mixin mediaTabletsMin {
   @media (max-width: $media-tablets-min) {
-    @content;
-  }
-}
-
-@mixin mediaTabletsMax {
-  @media (max-width: $media-tablets-max) {
     @content;
   }
 }
@@ -30,12 +18,6 @@
 
 @mixin mediaTabletsLaptopsMax {
   @media (max-width: $media-tablets-laptops-max) {
-    @content;
-  }
-}
-
-@mixin mediaExtraScreenMin {
-  @media (max-width: $media-extra-screen-min) {
     @content;
   }
 }
@@ -100,7 +82,7 @@
     line-height: 24px;
     max-width: 294px;
 
-    @include mediaExtraScreenMin {
+    @include mediaTabletsLaptopsMax {
       margin-bottom: $marginBottom1024;
     }
 
@@ -166,7 +148,7 @@
       margin: 16px 0 27px 0;
     }
 
-    @include mediaExtraScreenMin {
+    @include mediaTabletsLaptopsMax {
       margin: $margin1024;
     }
 
@@ -245,7 +227,7 @@
         text-decoration: none;
       }
 
-      @include mediaExtraScreenMin {
+      @include mediaTabletsLaptopsMax {
         padding: $padding1439;
       }
     }

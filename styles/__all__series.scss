@@ -53,7 +53,7 @@
             max-width: 250px;
             color: $mine-shaft;
 
-            @include mediaExtraScreenMin {
+            @include mediaTabletsLaptopsMax {
               margin-bottom: 16px;
             }
 
@@ -77,7 +77,7 @@
                 padding: 0 0 22px 18px;
               }
 
-              @include mediaExtraScreenMin {
+              @include mediaTabletsLaptopsMax {
                 padding: 0 0 23px 19px;
               }
 
@@ -91,7 +91,7 @@
               margin: 15px 0 25px 0;
             }
 
-            @include mediaExtraScreenMin {
+            @include mediaTabletsLaptopsMax {
               margin: 15px 0 22px 2px;
             }
 
@@ -114,7 +114,7 @@
           padding: 22px 25px 30px 20px;
         }
 
-        @include mediaExtraScreenMin {
+        @include mediaTabletsLaptopsMax {
           padding: 21px 17px 30px 19px;
           width: 350px;
         }
@@ -135,7 +135,7 @@
         margin-right: 0;
       }
 
-      @media (max-width: $media-mobile-large) {
+      @include mediaTabletsMin {
         width: 305px;
       }
     }
@@ -144,7 +144,7 @@
       margin-top: 41px;
     }
 
-    @include mediaExtraScreenMin {
+    @include mediaTabletsLaptopsMax {
       margin-top: 42px;
     }
 
@@ -153,12 +153,9 @@
       width: 100%;
     }
 
-    @include mediaTabletsMin {
-      margin-top: 28px;
-    }
-
-    @media (max-width: $media-mobile-large) {
+    @include mediaTabletsMin{
       justify-content: center;
+      margin-top: 28px;
       display: flex;
     }
 

@@ -237,7 +237,7 @@ body {
   margin: 0 auto;
   position: relative;
 
-  @include mediaExtraScreenMin {
+  @include mediaTabletsLaptopsMax {
     max-width: 1024px;
   }
 
@@ -258,7 +258,7 @@ button {
 .break__1024 {
   display: none;
 
-  @media (max-width: $media-extra-screen-min) and (min-width: $media-mobile)  {
+  @media (max-width: $media-tablets-laptops-max) {
     display: block;
   }
 }

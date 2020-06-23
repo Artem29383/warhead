@@ -58,7 +58,7 @@
       margin: 5px 0 4px 0;
     }
 
-    @include mediaExtraScreenMin {
+    @include mediaTabletsLaptopsMax {
       margin: 12px 23px 4px 0;
     }
 
@@ -77,7 +77,7 @@
 
   @include vector(0px, 1);
   .vector {
-    @include mediaTabletsMax {
+    @include mediaTabletsLaptopsMin {
       &:nth-child(1) {
         left: 0;
         top: 2px;
@@ -113,7 +113,7 @@
     line-height: 22px;
     font-family: "PT Sans Caption", Arial, sans-serif;
 
-    @include mediaExtraScreenMin {
+    @include mediaTabletsLaptopsMax {
       max-width: 550px;
     }
 
@@ -130,7 +130,7 @@
     right: 21px;
     position: absolute;
 
-    @include mediaExtraScreenMin {
+    @include mediaTabletsLaptopsMax {
       top: 16px;
       right: 15px;
     }
@@ -141,7 +141,7 @@
     }
   }
 
-  @include mediaExtraScreenMin {
+  @include mediaTabletsLaptopsMax {
     padding: 37px 49px 40px 31px;
   }
 

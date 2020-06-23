@@ -69,7 +69,7 @@
         margin-bottom: 20px;
       }
 
-      @include mediaExtraScreenMin {
+      @include mediaTabletsLaptopsMax {
         padding: 18px 17px 25px 19px;
       }
 
@@ -100,7 +100,7 @@
             bottom: 21px;
           }
 
-          @include mediaExtraScreenMin {
+          @include mediaTabletsLaptopsMax {
             bottom: 22px;
           }
         }
@@ -110,7 +110,7 @@
           margin-bottom: 20px;
         }
 
-        @include mediaExtraScreenMin {
+        @include mediaTabletsLaptopsMax {
           padding: 57px 18px 0 20px;
         }
       }
@@ -136,7 +136,7 @@
         padding: 21px 17px 20px 19px;
       }
 
-      @include mediaExtraScreenMin {
+      @include mediaTabletsLaptopsMax {
         padding: 17px 17px 18px 20px;
 
         .article-series-header {
@@ -207,7 +207,7 @@
         color: $cutty;
         margin-bottom: 4px;
 
-        @include mediaExtraScreenMin {
+        @include mediaTabletsLaptopsMax {
           margin-bottom: 7px;
         }
       }

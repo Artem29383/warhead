@@ -14,10 +14,6 @@
     width: 100%;
     margin-bottom: 20px;
 
-    @include mediaExtraScreenMin {
-      max-width: 558px;
-    }
-
     @include mediaTabletsLaptopsMin {
       max-width: 558px;
     }
@@ -32,10 +28,6 @@
     font-size: 18px;
     line-height: 24px;
     max-width: 720px;
-
-    @include mediaExtraScreenMin {
-      display: block;
-    }
 
     @include mediaTabletsLaptopsMin {
       display: none;
@@ -59,10 +51,6 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     margin-bottom: 42px;
-
-    @include mediaExtraScreenMin {
-      margin-bottom: 39px;
-    }
 
     @include mediaTabletsLaptopsMin {
       margin-bottom: 26px;
@@ -89,11 +77,6 @@
       @include mediaExtraScreenMax {
         bottom: 30px;
         left: 18px;
-      }
-
-      @include mediaExtraScreenMin {
-        bottom: 31px;
-        left: 19px;
       }
 
       @include mediaTabletsLaptopsMin {
@@ -124,10 +107,6 @@
         justify-content: space-between;
         @include footer(0px);
 
-        @include mediaExtraScreenMin {
-          bottom: 32px;
-        }
-
         @include mediaTabletsLaptopsMin {
           bottom: 15px;
           left: 31px;
@@ -143,12 +122,12 @@
       .statistics {
         margin-top: 4px;
 
-        @include mediaTabletsMax {
+        @include mediaTabletsLaptopsMin {
           margin-top: 9px;
         }
       }
 
-      @include mediaExtraScreenMin {
+      @include mediaTabletsLaptopsMax {
         background: center / cover url("./../assets/notepad1024.png");
 
         .articles-today__title {
@@ -188,7 +167,7 @@
         font-size: 24px;
         letter-spacing: -0.025em;
 
-        @include mediaExtraScreenMin {
+        @include mediaTabletsLaptopsMax {
           max-width: 100%;
         }
 
@@ -201,7 +180,7 @@
       .articles-today__text {
         max-width: 430px;
 
-        @include mediaExtraScreenMin {
+        @include mediaTabletsLaptopsMax {
           display: none;
         }
       }
@@ -214,7 +193,7 @@
         }
       }
 
-      @include mediaExtraScreenMin {
+      @include mediaTabletsLaptopsMax {
         max-width: 354px;
         background: center / cover url('./../assets/work1024.png');
       }
@@ -258,7 +237,7 @@
         font-size: 24px;
         letter-spacing: -0.03em;
 
-        @include mediaExtraScreenMin {
+        @include mediaTabletsLaptopsMax {
           max-width: 217px;
         }
 
@@ -275,7 +254,7 @@
         }
       }
 
-      @include mediaExtraScreenMin {
+      @include mediaTabletsLaptopsMax {
         max-width: 354px;
         margin-bottom: 26px;
         background: center / cover url('./../assets/claster1024.png');
@@ -322,7 +301,7 @@
       color: $mine-shaft;
     }
 
-    @include mediaExtraScreenMin {
+    @include mediaTabletsLaptopsMax {
       margin-left: -1px;
       margin-bottom: 25px;
     }

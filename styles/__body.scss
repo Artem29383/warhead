@@ -3,7 +3,7 @@
   background-color: $white;
   margin-top: 48px;
 
-  @include mediaExtraScreenMin {
+  @include mediaTabletsLaptopsMax {
     padding: 37px 11px 30px 12px;
     margin-top: 40px;
   }
@@ -30,7 +30,7 @@
     font-family: PT_SANS_CAPTION, sans-serif;
     margin-bottom: 40px;
 
-    @include mediaExtraScreenMin {
+    @include mediaTabletsLaptopsMax {
       margin-bottom: 45px;
     }
 
@@ -70,7 +70,7 @@
       }
     }
 
-    @include mediaExtraScreenMin {
+    @include mediaTabletsLaptopsMax {
       display: none;
     }
   }
@@ -101,7 +101,7 @@
       }
     }
 
-    @include mediaExtraScreenMin {
+    @include mediaTabletsLaptopsMax {
       margin-top: 0;
     }
 

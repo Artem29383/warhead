@@ -6,7 +6,7 @@
   @import "_articles__best";
   @import "_all__series";
 
-  @include mediaExtraScreenMin {
+  @include mediaTabletsLaptopsMax {
     max-width: 730px;
   }
 
